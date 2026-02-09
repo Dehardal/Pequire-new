@@ -1,0 +1,105 @@
+.features-section {
+    padding: 6rem 2rem;
+    background-color: #ffffff;
+    overflow: visible;
+    /* Allow numbers to hang */
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.features-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.features-subtitle {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+    /* Space for hanging numbers */
+}
+
+.feature-card {
+    background-color: #FADADD;
+    /* Light pink background */
+    padding: 3rem 2rem 1.5rem;
+    border-radius: 30px;
+    /* Rounded corners */
+    position: relative;
+    text-align: right;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.feature-number {
+    position: absolute;
+    top: -30px;
+    /* Pull it up to hang */
+    left: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.feature-card-description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-title {
+        font-size: 2rem;
+    }
+}

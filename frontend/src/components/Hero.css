@@ -1,0 +1,215 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Center content vertically */
+    padding: 12rem 2rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    background: #ffffff;
+    box-sizing: border-box;
+    /* Ensure padding is included in height */
+}
+
+/* Floating Toolbox Icons */
+.toolbox {
+    position: absolute;
+    z-index: 10;
+    animation: float 4s ease-in-out infinite;
+}
+
+
+.toolbox img {
+    width: 135px;
+    height: 135px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.toolbox-1 {
+    top: 15%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.toolbox-2 {
+    top: 12%;
+    right: 20%;
+    animation-delay: 0.5s;
+}
+
+.toolbox-3 {
+    top: 45%;
+    left: 8%;
+    animation-delay: 1s;
+}
+
+.toolbox-4 {
+    top: 40%;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 20;
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2D2D2D;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.875rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: #3D3D3D;
+    color: #fff;
+    border-color: #3D3D3D;
+}
+
+.btn-primary:hover {
+    background: #2D2D2D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #3D3D3D;
+    border-color: #3D3D3D;
+}
+
+.btn-secondary:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+/* Workers Container */
+.workers-container {
+    position: relative;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: -100px;
+    /* Pull image down further to overlap/sit on wave */
+    width: 100%;
+}
+
+.workers-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 88vh;
+    /* Responsive height relative to viewport */
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
+}
+
+.workers-image:hover {
+    transform: translateY(-10px);
+}
+
+/* Wave Container */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    line-height: 0;
+}
+
+.wave {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Remove inline-block spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem 0;
+        /* Add top padding for navbar */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toolbox {
+        display: none;
+    }
+
+    .workers-image {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.75rem 2rem;
+        font-size: 0.9rem;
+    }
+}
