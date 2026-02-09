@@ -1,0 +1,128 @@
+.app-stats-section {
+    padding: 6rem 2rem 0;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    /* Strict termination at the bottom */
+    text-align: center;
+}
+
+.app-stats-container {
+    max-width: 800px;
+    /* Even narrower container */
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.stats-header {
+    margin-bottom: 2.5rem;
+}
+
+.stats-main-title {
+    font-size: 2.2rem;
+    /* Scaled down further */
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    /* Tightened gap */
+    margin-bottom: 3rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    /* Scaled down further */
+    font-weight: 800;
+    color: #331d1d;
+    /* Dark reddish-brown from reference */
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #554444;
+    font-weight: 400;
+}
+
+.mockup-cluster {
+    margin-top: 2rem;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    /* Negative margin to pull the image down so the 30% cut aligns exactly with the section end */
+    margin-bottom: -150px;
+}
+
+.mockup-img {
+    max-width: 450px;
+    /* Ultra-compact mockup */
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+    /* Precisely cut 30% from the bottom visually */
+    clip-path: inset(0 0 30% 0);
+}
+
+/* Specific Organic Background Curve replicated from the pink shape image */
+.stats-curve-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%) rotate(-10deg);
+    width: 900px;
+    height: 900px;
+    background-color: #ffd9e6;
+    z-index: 1;
+    opacity: 0.5;
+    /* Complex border radius to mimic the organic shape */
+    border-radius: 43% 57% 38% 62% / 54% 39% 61% 46%;
+    pointer-events: none;
+}
+
+/* Removed old background blobs */
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .stat-number {
+        font-size: 4.5rem;
+    }
+
+    .stats-grid {
+        gap: 4rem;
+    }
+
+    .stats-main-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .stat-number {
+        font-size: 4rem;
+    }
+
+    .app-stats-section {
+        padding-top: 6rem;
+    }
+}

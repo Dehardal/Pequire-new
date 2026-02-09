@@ -7,6 +7,7 @@ import OfferBanner from '../components/OfferBanner';
 import HowItWorks from '../components/HowItWorks';
 import Testimonials from '../components/Testimonials';
 import ProviderCollection from '../components/ProviderCollection';
+import AppStats from '../components/AppStats';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <HowItWorks />
             <Testimonials />
             <ProviderCollection />
+            <AppStats />
         </div>
     );
 };
