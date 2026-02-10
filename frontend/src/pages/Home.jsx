@@ -8,6 +8,7 @@ import HowItWorks from '../components/HowItWorks';
 import Testimonials from '../components/Testimonials';
 import ProviderCollection from '../components/ProviderCollection';
 import AppStats from '../components/AppStats';
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <Testimonials />
             <ProviderCollection />
             <AppStats />
+            <Footer />
         </div>
     );
 };

@@ -4,18 +4,25 @@
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%;
+  width: 85%;
   max-width: 1200px;
   background: #F2F2F2;
   /* Light gray background */
   border-radius: 50px;
   /* Pill shape */
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 1.8rem;
   z-index: 1000;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, visibility 0.4s;
+}
+
+.navbar--hidden {
+  transform: translateY(-150%) translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .navbar-container {
@@ -34,12 +41,12 @@
   color: #4A3B32;
   /* Dark brown text */
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .logo-icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background: #4A3B32;
   /* Dark brown circle */
   border-radius: 50%;
@@ -49,7 +56,7 @@
 .navbar-menu {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -59,7 +66,7 @@
   color: #666;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   position: relative;
   transition: color 0.2s ease;
 }
@@ -69,6 +76,7 @@
   color: #4A3B32;
   /* Dark brown accent */
   font-weight: 700;
+  text-decoration: underline;
 }
 
 /* Remove underline for this style as it's not in the ref image usually, 
@@ -77,7 +85,7 @@
 
 /* Contact Button */
 .navbar-btn {
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 1.4rem;
   background: #4A3B32;
   /* Dark brown background */
   color: #fff;
@@ -85,7 +93,7 @@
   border-radius: 25px;
   /* Fully rounded button */
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   text-decoration: none;
   transition: transform 0.2s ease;
 }

@@ -1,13 +1,40 @@
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
     const location = useLocation();
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY < 150) {
+            // Always show at the top
+            setIsVisible(true);
+        } else if (currentScrollY > lastScrollY) {
+            // Hiding when scrolling down past threshold
+            setIsVisible(false);
+        } else {
+            // Showing when scrolling up from anywhere
+            setIsVisible(true);
+        }
+
+        setLastScrollY(currentScrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
 
     const isActive = (path) => location.pathname === path;
 
     return (
-        <nav className="navbar">
+        <nav className={`navbar ${!isVisible ? 'navbar--hidden' : ''}`}>
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
                     <div className="logo-icon"></div>
