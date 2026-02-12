@@ -1,71 +1,169 @@
-.new-testimonials-section {
-    padding: 80px 20px 140px;
-    background-color: #fff;
-    text-align: center;
+.testimonials-section {
+    padding: 100px 20px;
+    background-color: #fcfcfc;
+    width: 100%;
+    margin: 0 auto;
     overflow: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
-.new-testimonials-header {
-    max-width: 800px;
-    margin: 0 auto 80px;
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 80px;
 }
 
-.new-testimonials-title {
+.testimonials-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 5px;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.testimonials-subtitle {
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 800;
     color: #000;
-    margin-bottom: 10px;
-    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
 }
 
-.new-testimonials-subtitle {
-    font-size: 36px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 20px;
-}
-
-.new-testimonials-description {
+.testimonials-description {
     font-size: 18px;
-    color: #666;
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto;
     line-height: 1.6;
 }
 
-.testimonials-cards-container {
+/* Deck Container */
+.deck-outer-container {
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: -20px;
-    /* Slight overlap */
+    padding: 20px 0;
+}
+
+.deck-container {
     position: relative;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-top: 40px;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2500px;
+    user-select: none;
+    padding: 0 100px;
+    /* Space for buttons */
 }
 
-.testimonial-polaroid-card {
+.deck-stage {
+    position: relative;
+    width: 320px;
+    height: 440px;
+    transform-style: preserve-3d;
+    /* Center the stage - the cards will fan out from here */
+    transform: translateX(-240px);
+    /* Adjust to center the 160px * 3 spread */
+}
+
+.deck-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-style: preserve-3d;
+
+    left: calc(var(--position) * 160px);
+    transform:
+        translateX(0) translateZ(calc(var(--position) * -180px)) rotateZ(var(--rotation));
+    opacity: calc(1 - (var(--position) * 0.15));
+}
+
+.deck-card:active {
+    cursor: grabbing;
+}
+
+.deck-card.active {
+    left: 0;
+    opacity: 1;
+    transform: translateX(0) translateZ(0) rotateZ(0);
+    z-index: 100 !important;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-style: preserve-3d;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.deck-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     background: #fff;
-    padding: 20px;
-    width: 280px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     border: 1px solid #eee;
-    transition: transform 0.3s ease, z-index 0s;
-    flex-shrink: 0;
-    margin: 0 -15px;
-    /* Overlap effect */
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.testimonial-polaroid-card:hover {
-    transform: scale(1.05) rotate(0deg) !important;
-    z-index: 10 !important;
+.card-front {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text-top {
+    padding: 25px;
+    text-align: left;
+}
+
+.card-title,
+.card-subtitle {
+    font-size: 26px;
+    font-weight: 800;
+    color: #000;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
 }
 
 .card-image-wrapper {
+    flex: 1;
     width: 100%;
-    aspect-ratio: 1;
     overflow: hidden;
-    margin-bottom: 20px;
-    background: #f5f5f5;
 }
 
 .card-image-wrapper img {
@@ -74,43 +172,164 @@
     object-fit: cover;
 }
 
-.card-content {
+.card-footer {
+    background: #000;
+    padding: 15px;
     text-align: center;
 }
 
-.card-title {
-    font-size: 24px;
+.footer-label {
+    color: #fff;
+    font-size: 14px;
     font-weight: 700;
-    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Back Content Icons */
+.quote-icon {
+    font-size: 50px;
+    color: #fff;
+    opacity: 0.2;
     margin-bottom: 20px;
 }
 
-.card-btn-primary {
-    width: 100%;
-    padding: 12px;
-    background-color: #000;
-    color: #fff;
-    border: none;
+.card-description {
     font-size: 16px;
-    font-weight: 600;
+    line-height: 1.6;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Absolute Section Navigation - Repositioned closer to cards */
+.abs-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    font-size: 28px;
+    z-index: 200;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.card-btn-primary:hover {
-    opacity: 0.9;
+.abs-nav-btn.prev {
+    left: 20px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .testimonials-cards-container {
-        flex-wrap: wrap;
-        gap: 30px;
-        margin: 0 -10px;
+.abs-nav-btn.next {
+    right: 20px;
+}
+
+.abs-nav-btn:hover {
+    background: #222;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.abs-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Seamless Loop - Hide the jump */
+.deck-card.moving-back {
+    opacity: 0 !important;
+    transition: opacity 0.3s ease, transform 0s;
+    pointer-events: none;
+}
+
+/* Pill Control Container */
+.deck-controls-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.section-pill-btn {
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    padding: 16px 50px;
+    border-radius: 40px;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 0 #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-pill-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 #000;
+}
+
+.section-pill-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #000;
+}
+
+@media (max-width: 1024px) {
+    .deck-stage {
+        transform: translateX(-150px);
     }
 
-    .testimonial-polaroid-card {
-        margin: 0;
-        transform: none !important;
+    .deck-card {
+        left: calc(var(--position) * 100px);
+    }
+
+    .abs-nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-title {
+        font-size: 36px;
+    }
+
+    .testimonials-subtitle {
+        font-size: 30px;
+    }
+
+    .deck-stage {
+        transform: translateX(0);
+        width: 280px;
+        height: 380px;
+    }
+
+    .deck-card {
+        left: calc(var(--position) * 40px);
+    }
+
+    .deck-container {
+        min-height: 450px;
+        padding: 0 60px;
+    }
+
+    .abs-nav-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .abs-nav-btn.prev {
+        left: 5px;
+    }
+
+    .abs-nav-btn.next {
+        right: 5px;
     }
 }

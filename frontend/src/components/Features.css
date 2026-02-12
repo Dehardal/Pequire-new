@@ -1,8 +1,6 @@
 .features-section {
-    padding: 6rem 2rem;
+    padding: 80px 20px;
     background-color: #ffffff;
-    overflow: visible;
-    /* Allow numbers to hang */
 }
 
 .features-container {
@@ -12,94 +10,95 @@
 
 .features-header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 60px;
 }
 
 .features-title {
-    font-size: 2.5rem;
+    font-size: 42px;
     font-weight: 700;
     color: #000;
     line-height: 1.2;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .features-subtitle {
-    font-size: 1rem;
+    font-size: 16px;
     color: #666;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
 }
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding-top: 2rem;
-    /* Space for hanging numbers */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.feature-card {
-    background-color: #FADADD;
-    /* Light pink background */
-    padding: 3rem 2rem 1.5rem;
-    border-radius: 30px;
-    /* Rounded corners */
-    position: relative;
-    text-align: right;
-    min-height: 320px;
+.feature-card-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
+    align-items: center;
+    gap: 20px;
 }
 
-.feature-number {
-    position: absolute;
-    top: -30px;
-    /* Pull it up to hang */
-    left: 2rem;
-    width: 60px;
-    height: 60px;
-    background-color: #ffffff;
-    border-radius: 50%;
+.feature-icon-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #FADADD;
+    /* Light pink */
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.8rem;
-    font-weight: 700;
+    padding: 30%;
     color: #000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.feature-card-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 0.5rem;
-    margin-top: 0;
+.feature-icon-box:hover {
+    transform: translateY(-5px);
+    background-color: #f7ced3;
 }
 
-.feature-card-description {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
+.feature-icon-box svg {
+    width: 100%;
+    height: 100%;
+    stroke: #000;
+}
+
+.feature-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+    text-align: center;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .features-title {
+        font-size: 36px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
     .features-grid {
         grid-template-columns: 1fr;
     }
 
     .features-title {
-        font-size: 2rem;
+        font-size: 32px;
+    }
+
+    .feature-icon-box {
+        max-width: 250px;
     }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Testimonials.css';
+import './Trailrwheel.css';
 
 const testimonials = [
     { id: 1, name: 'Alex Rivera', title: 'Strategy Lead', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop', quote: 'Alex is at the top! Strategy is key to our success. Lorem ipsum dolor sit amet.' },
@@ -16,7 +16,7 @@ const testimonials = [
     { id: 12, name: 'Chloe Vance', title: 'Analyst', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1970&auto=format&fit=crop', quote: 'Chloe analyzes the data. Morbi id ipsum vitae tortor.' }
 ];
 
-const Testimonials = () => {
+const Trailrwheel = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
     const [rotation, setRotation] = useState(0);
@@ -52,8 +52,8 @@ const Testimonials = () => {
     };
 
     return (
-        <section className="testimonials-section">
-            <div className="testimonials-header">
+        <section className="trailrwheel-section">
+            <div className="trailrwheel-header">
                 <h2>Lorem ipsum dolor sit amet.</h2>
                 <h3>Lorem ipsum dolor</h3>
                 <p>
@@ -91,8 +91,8 @@ const Testimonials = () => {
                     })}
                 </div>
 
-                {/* Testimonial Quote Box - Fixed at the bottom of the semi-circle */}
-                <div className="testimonial-quote-container-wheel">
+                {/* Trailrwheel Quote Box - Fixed at the bottom of the semi-circle */}
+                <div className="trailrwheel-quote-container">
                     <div className="quote-box" key={activeIndex}>
                         <span className="quote-icon-top">“</span>
                         <h4 className="quote-author-name">{testimonials[activeIndex].name}</h4>
@@ -107,4 +107,4 @@ const Testimonials = () => {
     );
 };
 
-export default Testimonials;
+export default Trailrwheel;

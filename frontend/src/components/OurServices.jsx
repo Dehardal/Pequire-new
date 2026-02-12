@@ -2,70 +2,126 @@ import React from 'react';
 import './OurServices.css';
 
 const OurServices = () => {
-    const services = [
+    const serviceData = [
         {
-            id: 1,
-            title: 'Carpenter',
-            icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a2 2 0 0 1 2.83 2.83l-3.77 3.77a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l1.26-1.26a1 1 0 0 1 1.42 1.42l-4.24 4.24a1 1 0 0 1-1.42 0l-8.48-8.48a1 1 0 0 1 0-1.42l4.24-4.24a1 1 0 0 1 1.42 1.42L14.7 6.3z" />
-                    <path d="M4.3 19.7l6.4-6.4M2 22l4-4" />
-                </svg>
-            )
+            id: '01',
+            name: 'Carpenter',
+            points: [
+                { label: 'About', content: 'Our master carpenters bring decades of experience in high-end woodworking and structural timber.' },
+                { label: 'Service Description', content: 'From intricate cabinetry to structural home framing, we provide reliable, detailed craftsmanship that stands the test of time.' },
+                { label: 'Expertise', content: 'Cabinet Making, Wood Restoration, Structural Framing, Custom Furniture.' },
+                { label: 'Gallery', content: 'Explore our recent woodwork projects and bespoke furniture designs.', type: 'gallery', images: ['https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=400', 'https://images.unsplash.com/photo-1581092160562-40ca08e59814?q=80&w=400'] }
+            ]
         },
         {
-            id: 2,
-            title: 'Plumber',
-            icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41" />
-                    <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" />
-                    <path d="M12 2A10 10 0 0 0 2 12M22 12A10 10 0 0 1 12 22" />
-                </svg>
-            )
+            id: '02',
+            name: 'Plumber',
+            points: [
+                { label: 'About', content: 'Certified plumbing experts specializing in modern water systems and sustainable drainage solutions.' },
+                { label: 'Service Description', content: 'We handle everything from minor leaks to complete industrial plumbing overhauls with precision and speed.' },
+                { label: 'Expertise', content: 'Leak Detection, Pipe Relining, Water Heaters, Emergency Plumbing.' },
+                { label: 'Gallery', content: 'View our clean installations and professional repair work.', type: 'gallery', images: ['https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=400', 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=400'] }
+            ]
         },
         {
-            id: 3,
-            title: 'Electrician',
-            icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
-            )
+            id: '03',
+            name: 'Electrician',
+            points: [
+                { label: 'About', content: 'Licensed electricians focused on safety, efficiency, and modern smart home integrations.' },
+                { label: 'Service Description', content: 'Whether it is a simple outlet fix or a full commercial wiring project, we ensure everything is up to code.' },
+                { label: 'Expertise', content: 'Smart Home Setup, Fault Finding, EV Charger Install, Rewiring.' },
+                { label: 'Gallery', content: 'Showcasing our precision wiring and smart lighting solutions.', type: 'gallery', images: ['https://images.unsplash.com/photo-1581092162384-8987c1d64718?q=80&w=400', 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=400'] }
+            ]
         },
         {
-            id: 4,
-            title: 'Laundry Man',
-            icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M7 21a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a4 4 0 0 1-4 4H7z" />
-                    <circle cx="12" cy="13" r="4" />
-                    <path d="M12 11a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
-                    <path d="M7 7h1.5M10 7h.5M12.5 7h.5" />
-                </svg>
-            )
+            id: '04',
+            name: 'Laundry',
+            points: [
+                { label: 'About', content: 'Premium garment care services utilizing eco-friendly techniques and quick turnarounds.' },
+                { label: 'Service Description', content: 'We treat your clothes with the utmost care, ensuring they return to you fresh, crisp, and perfectly handled.' },
+                { label: 'Expertise', content: 'Dry Cleaning, Silk Care, Curtain Cleaning, Bulk Laundry.' },
+                { label: 'Gallery', content: 'See the results of our professional fabric care and finishing.', type: 'gallery', images: ['https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=400', 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=400'] }
+            ]
         }
     ];
 
+    const flatPoints = serviceData.flatMap(service =>
+        service.points.map(point => ({
+            ...point,
+            serviceName: service.name,
+            serviceId: service.id
+        }))
+    );
+
+    const [activeIndex, setActiveIndex] = React.useState(0);
+    const itemRefs = React.useRef([]);
+
+    React.useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px', // Detect items near the top of the center
+            threshold: 0
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const index = parseInt(entry.target.getAttribute('data-index'));
+                    setActiveIndex(index);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        itemRefs.current.forEach(ref => {
+            if (ref) observer.observe(ref);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const handleItemClick = (index) => {
+        setActiveIndex(index);
+    };
+
     return (
         <section className="our-services-section">
-            <div className="our-services-container">
-                <div className="our-services-header">
-                    <h2 className="our-services-title">LOREM IPSUM<br />DOLOR</h2>
-                    <div className="our-services-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ipsum vitae tristique cursus eu sed sapien.</p>
+            <div className="services-main-container">
+                <div className="services-left-side">
+                    <div className="services-sticky-content">
+                        <h2 className="services-main-title">{flatPoints[activeIndex].serviceName}</h2>
+                        <span className="services-large-number">{flatPoints[activeIndex].serviceId}</span>
                     </div>
                 </div>
 
-                <div className="our-services-grid">
-                    {services.map(service => (
-                        <div key={service.id} className="our-service-card">
-                            <div className="our-service-icon-box">
-                                {service.icon}
+                <div className="services-right-side">
+                    <div className="services-list">
+                        {flatPoints.map((item, index) => (
+                            <div
+                                key={index}
+                                data-index={index}
+                                ref={el => itemRefs.current[index] = el}
+                                className={`service-point-item ${index === activeIndex ? 'active' : ''} ${index > 0 && index % 4 === 0 ? 'new-service-group' : ''}`}
+                                onClick={() => handleItemClick(index)}
+                            >
+                                <div className="point-header">
+                                    <h3 className="point-label">{item.label}</h3>
+                                    <span className="point-plus">+</span>
+                                </div>
+                                <div className="point-content">
+                                    <p className="point-text">{item.content}</p>
+                                    {item.type === 'gallery' && (
+                                        <div className="point-gallery">
+                                            {item.images.map((img, idx) => (
+                                                <img key={idx} src={img} alt="Service Gallery" />
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-                            <p className="our-service-name">{service.title}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
