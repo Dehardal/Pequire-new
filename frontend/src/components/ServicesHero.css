@@ -1,0 +1,147 @@
+.services-hero {
+    padding: 120px 0 80px 0;
+    background-color: #fff;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.services-hero-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.services-hero-content {
+    width: 100%;
+}
+
+.services-hero-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.services-hero-title {
+    font-size: 120px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1;
+    margin-bottom: 40px;
+    letter-spacing: -0.04em;
+}
+
+.services-hero-bottom-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+    gap: 20px;
+}
+
+.services-hero-description {
+    max-width: 500px;
+}
+
+.services-hero-features {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+}
+
+.services-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8px;
+    min-width: 200px;
+}
+
+.services-feature-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #999;
+    border-radius: 50%;
+}
+
+.services-feature-text {
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+}
+
+.services-hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.services-btn-primary {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 16px 48px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.services-btn-primary:hover {
+    background-color: #333;
+}
+
+.services-btn-secondary {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #666;
+    padding: 16px 48px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services-btn-secondary:hover {
+    border-color: #000;
+    color: #000;
+}
+
+@media (max-width: 992px) {
+    .services-hero-title {
+        font-size: 80px;
+    }
+
+    .services-hero-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .services-hero-features {
+        grid-column: 1;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero-title {
+        font-size: 60px;
+    }
+
+    .services-hero {
+        padding: 80px 0 60px 0;
+    }
+
+    .services-hero-actions {
+        flex-direction: column;
+    }
+
+    .services-btn-primary,
+    .services-btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}

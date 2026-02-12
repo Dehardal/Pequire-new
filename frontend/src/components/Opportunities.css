@@ -1,0 +1,138 @@
+.opportunities-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.opportunities-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.opportunities-subtitle {
+    font-size: 16px;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.opportunities-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin-bottom: 80px;
+    letter-spacing: -0.02em;
+}
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.opportunity-card {
+    background: #fff;
+    border: 1px solid #f9ecec;
+    border-radius: 4px;
+    padding: 40px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.opportunity-card:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+    border-color: #f2e7f9;
+}
+
+.card-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.card-tags {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.tag-pill {
+    background-color: #fdeaea;
+    color: #e44d4d;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-requirements {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.card-requirements li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 14px;
+}
+
+.card-requirements li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ddd;
+}
+
+.card-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #333;
+}
+
+@media (max-width: 992px) {
+    .opportunities-grid {
+        gap: 20px;
+    }
+
+    .opportunity-card {
+        padding: 30px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .opportunities-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .opportunities-section {
+        padding: 60px 0;
+    }
+}
