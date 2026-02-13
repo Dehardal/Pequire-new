@@ -15,9 +15,9 @@ const ProcessSection = () => {
 
     useEffect(() => {
         const observerOptions = {
-            root: document.querySelector('.process-scroll-container'),
-            rootMargin: '-40% 0px -40% 0px', // Adjusted margin to center accurate detection
-            threshold: 0.5
+            root: null, // Use Viewport as root for Global Scroll
+            rootMargin: '-45% 0px -45% 0px', // Trigger when item is in the exact center 10% band
+            threshold: 0
         };
 
         const observerCallback = (entries) => {
@@ -47,9 +47,10 @@ const ProcessSection = () => {
                 {/* Left Fixed Column (30%) */}
                 <div className="process-left-column">
                     <div className="timeline-arc-wrapper">
-                        <svg className="arc-line" viewBox="0 0 200 600" fill="none" preserveAspectRatio="xMinYMid meet">
+                        {/* Shifted ViewBox and Path to x=60 (was x=10) */}
+                        <svg className="arc-line" viewBox="0 0 300 600" fill="none" preserveAspectRatio="xMinYMid meet">
                             <path
-                                d="M 10 50 A 300 300 0 0 1 10 550"
+                                d="M 60 50 A 300 300 0 0 1 60 550"
                                 stroke="#d0d0d0"
                                 strokeWidth="6"
                                 fill="none"
@@ -59,22 +60,22 @@ const ProcessSection = () => {
 
                         {/* Dots with Active State Logic */}
                         <div className={`fixed-dot dot-1 ${activeDotIndex === 0 ? 'active' : ''}`}>
-                            <div className="step-dot dot-large" style={{ backgroundColor: '#D4849A' }} />
+                            <div className="step-dot" style={{ backgroundColor: '#D4849A' }} />
                             <span className="step-label">Start</span>
                         </div>
 
                         <div className={`fixed-dot dot-2 ${activeDotIndex === 1 ? 'active' : ''}`}>
-                            <div className="step-dot dot-medium" style={{ backgroundColor: '#9B7DB8' }} />
+                            <div className="step-dot" style={{ backgroundColor: '#9B7DB8' }} />
                             <span className="step-label">Process</span>
                         </div>
 
                         <div className={`fixed-dot dot-3 ${activeDotIndex === 2 ? 'active' : ''}`}>
-                            <div className="step-dot dot-medium" style={{ backgroundColor: '#98D470' }} />
+                            <div className="step-dot" style={{ backgroundColor: '#98D470' }} />
                             <span className="step-label">Review</span>
                         </div>
 
                         <div className={`fixed-dot dot-4 ${activeDotIndex === 3 ? 'active' : ''}`}>
-                            <div className="step-dot dot-small" style={{ backgroundColor: '#8ED8E8' }} />
+                            <div className="step-dot" style={{ backgroundColor: '#8ED8E8' }} />
                             <span className="step-label">End</span>
                         </div>
                     </div>

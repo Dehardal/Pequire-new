@@ -1,29 +1,31 @@
 .process-section {
-    padding: 20px 40px 20px 0;
+    padding: 80px 40px 80px 0;
     background-color: #fff;
-    overflow: hidden;
-    height: 130vh;
-    display: flex;
-    align-items: flex-start;
+    /* Removed overflow: hidden and fixed height to allow global scrolling */
+    /* height: 130vh; */
+    position: relative;
 }
 
 .process-wrapper {
     width: 100%;
-    height: 100%;
+    /* Flex container matches height of tallest child (right column content) */
     display: flex;
     gap: 0;
+    align-items: stretch;
+    /* Ensuring columns are equal height */
 }
 
 /* ===== Left Fixed Column (30%) ===== */
 .process-left-column {
     width: 30%;
-    height: 100%;
     position: relative;
+    /* Height is handled by flexbox stretch */
 }
 
 .timeline-arc-wrapper {
     position: sticky;
     top: calc(50vh - 300px);
+    /* Centers the 600px tall arc in the viewport */
     width: 100%;
     height: 600px;
     display: flex;
@@ -56,11 +58,11 @@
 
 .step-dot {
     width: 60px;
-    /* Consistent Size */
     height: 60px;
-    /* Consistent Size */
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    /* Ensure bg if not set inline */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -82,21 +84,10 @@
     font-size: 16px;
 }
 
-/* Specific size classes NO LONGER NEEDED - enforced consistency above */
-.dot-large,
-.dot-medium,
-.dot-small {
-    /* Kept for backward compat with JSX classes but overridden by step-dot above? 
-       Actually CSS specificity might use these if defined later. 
-       Let's undefine them or make them same. */
-    width: 60px;
-    height: 60px;
-}
-
-/* Dot Positioning */
+/* Dot Positioning (Shifted +50px right) */
 .dot-1 {
     top: 50px;
-    left: 10px;
+    left: 60px;
     transform: translate(-50%, -50%);
 }
 
@@ -106,7 +97,7 @@
 
 .dot-2 {
     top: 217px;
-    left: 132px;
+    left: 182px;
     transform: translate(-50%, -50%);
 }
 
@@ -116,7 +107,7 @@
 
 .dot-3 {
     top: 383px;
-    left: 132px;
+    left: 182px;
     transform: translate(-50%, -50%);
 }
 
@@ -126,7 +117,7 @@
 
 .dot-4 {
     top: 550px;
-    left: 10px;
+    left: 60px;
     transform: translate(-50%, -50%);
 }
 
@@ -138,27 +129,16 @@
 /* ===== Right Scrollable Column (70%) ===== */
 .process-right-column {
     width: 70%;
-    height: 100%;
-    overflow: hidden;
+    /* Remove height constraint and overflow */
     position: relative;
+    padding-bottom: 80px;
+    /* Bottom spacing */
 }
 
 .process-scroll-container {
-    height: 100%;
-    overflow-y: auto;
-    /* Added left padding to prevent clipping of scaled active items */
+    /* Remove height and overflow to allow page scroll */
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 40px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    /* Ensure padding doesn't break layout width */
-}
-
-.process-scroll-container::-webkit-scrollbar {
-    display: none;
 }
 
 /* Content Rows */
@@ -166,7 +146,8 @@
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    padding: 20px 0;
+    padding: 60px 0;
+    /* Increased vertical spacing for global scroll feel */
     width: 100%;
     transition: opacity 0.3s ease, transform 0.3s ease;
     opacity: 0.5;
@@ -210,23 +191,23 @@
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .process-section {
-        height: auto;
         padding: 40px 20px;
     }
 
     .process-wrapper {
         flex-direction: column;
-        height: auto;
     }
 
     .process-left-column {
         width: 100%;
         height: 300px;
+        /* Fixed height for mobile view */
         order: -1;
     }
 
     .timeline-arc-wrapper {
         position: relative;
+        /* Static on mobile */
         top: auto;
         height: 100%;
         justify-content: center;
@@ -234,14 +215,14 @@
 
     .process-right-column {
         width: 100%;
-        height: auto;
     }
 
     .process-scroll-container {
-        overflow-y: visible;
-        height: auto;
         padding-left: 0;
-        /* Reset for mobile */
+    }
+
+    .content-row {
+        padding: 40px 0;
     }
 
     .dot-1 {
