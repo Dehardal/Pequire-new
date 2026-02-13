@@ -1,0 +1,117 @@
+.how-to-use-page {
+    width: 100%;
+}
+
+.download-hero {
+    background-color: #fcebe9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 120px 20px 80px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.keywords-bg-container {
+    position: absolute;
+    top: 90px;
+    left: -10%;
+    width: 120%;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.keywords-row {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000;
+    white-space: nowrap;
+    text-align: left;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+.download-content {
+    text-align: center;
+    z-index: 10;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.download-title {
+    font-size: 150px;
+    font-weight: 700;
+    color: #000;
+    margin: 50px 0 50px 0;
+    line-height: 0.88;
+    letter-spacing: -3px;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-primary-black {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 22px 75px;
+    border-radius: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-black:hover {
+    transform: scale(1.02);
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    color: #8c8c8c;
+    border: 1.2px solid #d4d4d4;
+    padding: 22px 75px;
+    border-radius: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-outline:hover {
+    border-color: #999;
+}
+
+@media (max-width: 1024px) {
+    .download-title {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .download-title {
+        font-size: 60px;
+        letter-spacing: -2px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn-primary-black,
+    .btn-primary-outline {
+        padding: 18px 40px;
+    }
+}
