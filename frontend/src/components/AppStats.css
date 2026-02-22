@@ -21,9 +21,8 @@
 
 .stats-main-title {
     font-size: 2.2rem;
-    /* Scaled down further */
     font-weight: 800;
-    color: #1a1a1a;
+    color: #0B1F3B;
     letter-spacing: -1px;
     font-family: 'Outfit', sans-serif;
 }
@@ -44,10 +43,8 @@
 
 .stat-number {
     font-size: 2.5rem;
-    /* Scaled down further */
     font-weight: 800;
-    color: #331d1d;
-    /* Dark reddish-brown from reference */
+    color: #0B1F3B;
     line-height: 1;
     margin-bottom: 0.3rem;
     font-family: 'Outfit', sans-serif;
@@ -55,7 +52,7 @@
 
 .stat-label {
     font-size: 1.1rem;
-    color: #554444;
+    color: #5a6a7e;
     font-weight: 400;
 }
 
@@ -87,10 +84,9 @@
     transform: translate(-50%, -35%) rotate(-10deg);
     width: 900px;
     height: 900px;
-    background-color: #ffd9e6;
+    background-color: #e8f0fc;
     z-index: 1;
     opacity: 0.5;
-    /* Complex border radius to mimic the organic shape */
     border-radius: 43% 57% 38% 62% / 54% 39% 61% 46%;
     pointer-events: none;
 }

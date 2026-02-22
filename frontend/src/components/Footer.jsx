@@ -1,16 +1,20 @@
 import React from 'react';
 import './Footer.css';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
+import Logo from '../assets/Logo.png';
+import Wordmark from '../assets/wordmark.png';
+import Letters from '../assets/Letters.png';
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-top">
-                <div className="footer-container">
+                <div className="footer-container on-light">
                     <div className="footer-info">
                         <div className="footer-logo">
-                            <div className="logo-icon"></div>
-                            <h2>Lorem ipsum</h2>
+                            <img src={Logo} alt="Pequire Logo" className="footer-logo-img" />
+                            <img src={Wordmark} alt="Pequire" className="footer-wordmark-img" />
                         </div>
                         <p className="footer-desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ipsum vitae tortor tristique cursus.
@@ -25,49 +29,60 @@ const Footer = () => {
                                 </svg>
                             </a>
                         </div>
+                        <div className="footer-contact-info" style={{ marginTop: '30px', color: '#666', fontSize: '14px', lineHeight: '1.8' }}>
+                            <p>Email: support@pequire.com</p>
+                            <p>Phone: 1800-123-PEQUIRE (tollfree)</p>
+                            <p>Hours: 24/7 Support</p>
+                        </div>
                     </div>
 
-                    <div className="footer-links-grid">
-                        <div className="footer-col">
-                            <h3>Navigation</h3>
-                            <ul>
-                                <li><a href="/">Homepage</a></li>
-                                <li><a href="/services">Services</a></li>
-                                <li><a href="/downloads">Downloads</a></li>
-                                <li><a href="/careers">Careers</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer-col">
-                            <h3>For Users</h3>
-                            <ul>
-                                <li><a href="/how-to-use">How to Use</a></li>
-                                <li><a href="/services-near-me">Services Near you</a></li>
-                                <li><a href="/join-as-provider">Join as Provider</a></li>
-                                <li><a href="/download-app">Download App</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer-col">
-                            <h3>Social Links</h3>
-                            <ul>
-                                <li><a href="/privacy-policy">Privacy & Policy</a></li>
-                                <li><a href="/refund-policy">Refund & Cancellation Policy</a></li>
-                                <li><a href="/terms-conditions">Terms & Conditions</a></li>
-                                <li><a href="/support">Support & Help</a></li>
-                            </ul>
-                        </div>
+                    <div className="footer-grid">
+                    <div className="footer-col">
+                        <h3>For Users</h3>
+                        <ul>
+                            <li><NavLink to="/how-to-use">How to Use</NavLink></li>
+                            <li><NavLink to="/services">Services Near You</NavLink></li>
+                            <li><NavLink to="/careers">Join as Provider</NavLink></li>
+                            <li><a href="#">Download App</a></li>
+                            <li><a href="#">Help & Support</a></li>
+                        </ul>
                     </div>
+                    <div className="footer-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><NavLink to="/about">About Us</NavLink></li>
+                            <li><NavLink to="/careers">Careers</NavLink></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div className="footer-col">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Refund & Cancellation</a></li>
+                            <li><a href="#">Provider Agreement</a></li>
+                        </ul>
+                    </div>
+                </div>
                 </div>
             </div>
 
             <div className="footer-middle">
                 <div className="pink-section">
                     <div className="pink-circle-bg"></div>
-                    <h1 className="huge-text">Lorem ipsum</h1>
+                    <div 
+                        className="huge-image" 
+                        style={{ '--mask-url': `url(${Letters})` }}
+                        aria-label="Letters Background"
+                    />
                 </div>
             </div>
 
-            <div className="footer-bottom">
-                <p>Lorem ipsum dolor sit amet, consectetur</p>
+            <div className="footer-bottom on-dark">
+                <p>&copy; {new Date().getFullYear()} Pequire. All rights reserved.</p>
             </div>
         </footer>
     );

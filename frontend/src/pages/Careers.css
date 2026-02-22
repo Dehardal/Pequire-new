@@ -7,9 +7,9 @@
 .career-hero {
     position: relative;
     padding: 180px 0 120px;
-    background: radial-gradient(circle at 80% 20%, rgba(255, 230, 150, 0.45) 0%, transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(255, 150, 50, 0.35) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 230, 0.5) 100%);
+    background: radial-gradient(circle at 80% 20%, rgba(47, 128, 237, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(11, 31, 59, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 1) 0%, rgba(232, 240, 252, 0.5) 100%);
     overflow: hidden;
     min-height: 85vh;
     display: flex;
@@ -47,7 +47,7 @@
 .hero-headline {
     font-size: 54px;
     font-weight: 800;
-    color: #000;
+    color: #0B1F3B;
     line-height: 1.35;
     margin-bottom: 30px;
     letter-spacing: -0.02em;
@@ -82,7 +82,7 @@
 }
 
 .btn-primary {
-    background-color: #000;
+    background-color: #2F80ED;
     color: #fff;
     padding: 16px 45px;
     border-radius: 4px;
@@ -94,24 +94,24 @@
 }
 
 .btn-primary:hover {
-    background-color: #222;
+    background-color: #1a6fd4;
     transform: translateY(-2px);
 }
 
 .btn-outline {
     background-color: transparent;
-    color: #000;
+    color: #0B1F3B;
     padding: 16px 45px;
     border-radius: 4px;
     font-size: 18px;
     font-weight: 500;
-    border: 1px solid #000;
+    border: 1px solid #0B1F3B;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .btn-outline:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #e8f0fc;
     transform: translateY(-2px);
 }
 

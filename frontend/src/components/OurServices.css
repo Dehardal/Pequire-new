@@ -34,7 +34,7 @@
 .services-main-title {
     font-size: 52px;
     font-weight: 700;
-    color: #000;
+    color: #0B1F3B;
     line-height: 1.1;
     letter-spacing: -0.02em;
     margin: 0;
@@ -45,7 +45,7 @@
     display: block;
     font-size: 180px;
     font-weight: 600;
-    color: #000;
+    color: #0B1F3B;
     line-height: 1;
     letter-spacing: -0.04em;
     margin-top: auto;
@@ -93,7 +93,7 @@
 .point-plus {
     font-size: 28px;
     font-weight: 300;
-    color: #000;
+    color: #2F80ED;
     line-height: 1;
     transition: transform 0.4s ease;
 }
@@ -103,7 +103,7 @@
 }
 
 .service-point-item.active .point-label {
-    color: #000;
+    color: #2F80ED;
     font-weight: 700;
 }
 

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import Logo from '../assets/Logo.png';
+import Wordmark from '../assets/wordmark.png';
 
 const Navbar = () => {
     const location = useLocation();
@@ -37,8 +39,8 @@ const Navbar = () => {
         <nav className={`navbar ${!isVisible ? 'navbar--hidden' : ''}`}>
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo">
-                    <div className="logo-icon"></div>
-                    <span>Company Name</span>
+                    <img src={Logo} alt="Pequire Logo" className="navbar-logo-img" />
+                    <img src={Wordmark} alt="Pequire" className="navbar-wordmark-img" />
                 </Link>
 
                 <ul className="navbar-menu">
@@ -60,6 +62,11 @@ const Navbar = () => {
                     <li>
                         <Link to="/careers" className={`navbar-link ${isActive('/careers') ? 'active' : ''}`}>
                             Careers
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about" className={`navbar-link ${isActive('/about') ? 'active' : ''}`}>
+                            About Us
                         </Link>
                     </li>
                 </ul>

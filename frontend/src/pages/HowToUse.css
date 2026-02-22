@@ -3,7 +3,7 @@
 }
 
 .download-hero {
-    background-color: #fcebe9;
+    background-color: #e8f0fc;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
 .keywords-row {
     font-size: 13px;
     font-weight: 500;
-    color: #000;
+    color: #0B1F3B;
     white-space: nowrap;
     text-align: left;
     line-height: 1.4;
@@ -48,7 +48,7 @@
 .download-title {
     font-size: 150px;
     font-weight: 700;
-    color: #000;
+    color: #0B1F3B;
     margin: 50px 0 50px 0;
     line-height: 0.88;
     letter-spacing: -3px;
@@ -61,7 +61,7 @@
 }
 
 .btn-primary-black {
-    background-color: #000;
+    background-color: #2F80ED;
     color: #fff;
     border: none;
     padding: 22px 75px;
@@ -73,6 +73,7 @@
 }
 
 .btn-primary-black:hover {
+    background-color: #1a6fd4;
     transform: scale(1.02);
 }
 

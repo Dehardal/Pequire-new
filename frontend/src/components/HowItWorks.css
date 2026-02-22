@@ -109,7 +109,7 @@
     font-size: 3.2rem;
     /* Reduced from 4.8rem */
     font-weight: 700;
-    color: #000;
+    color: #0B1F3B;
     line-height: 1.1;
     margin-bottom: 2rem;
     text-transform: none;
@@ -126,8 +126,7 @@
 
 .btn-primary-custom {
     padding: 0.9rem 3rem;
-    /* Tighter button */
-    background-color: #000;
+    background-color: #2F80ED;
     color: #fff;
     border: none;
     font-size: 1rem;
@@ -138,7 +137,7 @@
 }
 
 .btn-primary-custom:hover {
-    background-color: #333;
+    background-color: #1a6fd4;
     transform: translateY(-2px);
 }
 

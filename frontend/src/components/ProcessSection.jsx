@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './ProcessSection.css';
 
 // Generate 16 steps with alternating layout
+// Generate 16 steps with alternating layout
 const steps = Array.from({ length: 16 }, (_, i) => ({
     id: i + 1,
     label: `Process Step ${i + 1}`,

@@ -38,18 +38,22 @@
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  color: #4A3B32;
-  /* Dark brown text */
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-family: var(--font-primary);
+  color: var(--primary-navy);
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
-.logo-icon {
-  width: 24px;
-  height: 24px;
-  background: #4A3B32;
-  /* Dark brown circle */
-  border-radius: 50%;
+.navbar-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-wordmark-img {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Menu Links */
@@ -63,20 +67,18 @@
 }
 
 .navbar-link {
-  color: #666;
+  color: var(--neutral-400);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   position: relative;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .navbar-link:hover,
 .navbar-link.active {
-  color: #4A3B32;
-  /* Dark brown accent */
-  font-weight: 700;
-  text-decoration: underline;
+  color: var(--secondary-blue);
+  font-weight: 600;
 }
 
 /* Remove underline for this style as it's not in the ref image usually, 
@@ -85,22 +87,20 @@
 
 /* Contact Button */
 .navbar-btn {
-  padding: 0.5rem 1.4rem;
-  background: #4A3B32;
-  /* Dark brown background */
+  padding: 0.6rem 1.6rem;
+  background: var(--secondary-blue);
   color: #fff;
   border: none;
-  border-radius: 25px;
-  /* Fully rounded button */
+  border-radius: 50px;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .navbar-btn:hover {
-  transform: scale(1.05);
-  background: #3a2e27;
+  transform: translateY(-2px);
+  background: var(--secondary-blue-dark);
 }
 
 /* Responsive */

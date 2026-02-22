@@ -1,7 +1,8 @@
 import React from 'react';
 import './HowToUse.css';
-import Footer from '../components/Footer';
 import ProcessSection from '../components/ProcessSection';
+import SpecialFeatures from '../components/SpecialFeatures';
+import Footer from '../components/Footer';
 
 const HowToUse = () => {
     return (
@@ -20,15 +21,16 @@ const HowToUse = () => {
                 </div>
 
                 <div className="download-content">
-                    <h1 className="download-title">Lorem ipsum</h1>
+                    <h1 className="download-title">Get the Pequire App</h1>
                     <div className="download-buttons">
-                        <button className="btn-primary-black">Primary</button>
-                        <button className="btn-primary-outline">Primary</button>
+                        <button className="btn-primary-black">iPhone Download</button>
+                        <button className="btn-primary-outline">Android Download</button>
                     </div>
                 </div>
             </section>
 
             <ProcessSection />
+            <SpecialFeatures />
             <Footer />
         </div>
     );

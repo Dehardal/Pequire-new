@@ -4,38 +4,38 @@ import './Testimonials.css';
 const testimonialData = [
     {
         id: 1,
-        title: 'Lorem ipsum',
-        subtitle: 'dolor',
-        image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop',
-        description: 'Exceptional craftsmanship and attention to detail. The custom cabinets exceeded my expectations.',
+        title: 'Priya Sharma',
+        subtitle: 'Mumbai',
+        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop',
+        description: 'Pequire diagnosed my AC issue in seconds. The technician arrived within 30 minutes and fixed it immediately. Impressive!',
     },
     {
         id: 2,
-        title: 'Lorem ipsum',
-        subtitle: 'dolor',
-        image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=2070&auto=format&fit=crop',
-        description: 'Fast, professional, and reliable. Fixed our leak in no time and left everything spotless.',
+        title: 'Rahul Mehta',
+        subtitle: 'Bangalore',
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop',
+        description: 'Finally, a service app I can trust. The plumber was professional, the pricing was transparent, and the job was done perfectly.',
     },
     {
         id: 3,
-        title: 'Lorem ipsum',
-        subtitle: 'dolor',
-        image: 'https://images.unsplash.com/photo-1581092160562-40ca08e59814?q=80&w=2070&auto=format&fit=crop',
-        description: 'Highly skilled electrician. Upgraded our entire panel safely and efficiently. Highly recommended!',
+        title: 'Anjali Reddy',
+        subtitle: 'Hyderabad',
+        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop',
+        description: 'I used the AI diagnosis for an electrical issue. It was spot-on, and I got three quotes within minutes. Highly recommend.',
     },
     {
         id: 4,
-        title: 'Lorem ipsum',
-        subtitle: 'dolor',
-        image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2070&auto=format&fit=crop',
-        description: 'The most convenient laundry service I’ve ever used. Clothes come back fresh and perfectly folded.',
+        title: 'Vikram Singh',
+        subtitle: 'Delhi',
+        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop',
+        description: 'The best service experience I\'ve had. The app is easy to use and the quality of work is top-notch.',
     },
     {
         id: 5,
-        title: 'Lorem ipsum',
-        subtitle: 'dolor',
-        image: 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?q=80&w=2070&auto=format&fit=crop',
-        description: 'Sparkling clean results every single time. Their team is thorough, polite, and very professional.',
+        title: 'Sneha Kapoor',
+        subtitle: 'Pune',
+        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop',
+        description: 'Fast, reliable, and affordable. Pequire is now my go-to for all home maintenance needs.',
     }
 ];
 
@@ -139,14 +139,12 @@ const Testimonials = () => {
                         {testimonialData.map((item, index) => {
                             let position = (index - currentIndex + testimonialData.length) % testimonialData.length;
                             const isActive = position === 0;
-                            // Identify the card that just left the front and is moving to the back
-                            const isMovingBack = position === testimonialData.length - 1;
                             const rotation = (item.id % 2 === 0 ? 5 : -5) * (position + 1) * 0.5;
 
                             return (
                                 <div
                                     key={item.id}
-                                    className={`deck-card ${isActive ? 'active' : ''} ${isActive && isFlipped ? 'flipped' : ''} ${isMovingBack ? 'moving-back' : ''}`}
+                                    className={`deck-card ${isActive ? 'active' : ''} ${isActive && isFlipped ? 'flipped' : ''}`}
                                     style={{
                                         '--position': position,
                                         '--rotation': `${rotation}deg`,

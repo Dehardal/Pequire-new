@@ -1,0 +1,87 @@
+.join-pro-section {
+    padding: 100px 20px;
+    background-color: var(--surface);
+}
+
+.join-pro-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.join-pro-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.join-pro-title {
+    font-family: var(--font-primary);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-navy);
+    margin-bottom: 20px;
+}
+
+.join-pro-subtitle {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--neutral-400);
+}
+
+.join-pro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.join-pro-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.join-pro-card h3 {
+    font-size: 24px;
+    color: var(--primary-navy);
+    margin-bottom: 30px;
+}
+
+.benefit-list,
+.step-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-list li,
+.step-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--neutral-200);
+    color: var(--neutral-500);
+}
+
+.join-pro-footer {
+    text-align: center;
+    background: var(--primary-navy);
+    color: white;
+    padding: 60px;
+    border-radius: 30px;
+}
+
+.earnings-preview {
+    margin-bottom: 40px;
+}
+
+.earnings-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    font-weight: 600;
+    color: var(--accent-cyan);
+}
+
+.join-pro-footer .btn-primary {
+    padding: 1.25rem 4rem;
+}

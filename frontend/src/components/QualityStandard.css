@@ -21,7 +21,7 @@
 .quality-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #000;
+    color: #0B1F3B;
     line-height: 1.2;
     margin-bottom: 1.5rem;
 }
@@ -52,14 +52,12 @@
     position: absolute;
     width: 720px;
     height: 400px;
-    background-color: #fbe3e6;
-    /* Matches the soft pink in image */
+    background-color: #e8f0fc;
     border-radius: 56% 44% 52% 48% / 48% 60% 40% 52%;
     z-index: 1;
     right: -250px;
     top: 50%;
     transform: translateY(-40%);
-    /* Shifted down from -50% */
     opacity: 1;
 }
 
@@ -86,28 +84,24 @@
 }
 
 .btn-primary {
-    background: #000;
-    /* Assuming black from image logic */
+    background: #0B1F3B;
     color: #fff;
-    border-color: #000;
+    border-color: #0B1F3B;
 }
 
 .btn-primary:hover {
-    background: #333;
+    background: #0d2647;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #999;
-    /* Grey text based on image */
-    border: 1px solid #ddd;
-    /* Light border */
+    color: #2F80ED;
+    border: 1px solid #2F80ED;
 }
 
 .btn-secondary:hover {
-    border-color: #999;
-    color: #666;
+    background: #e8f0fc;
     transform: translateY(-2px);
 }
 

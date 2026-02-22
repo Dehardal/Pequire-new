@@ -26,7 +26,7 @@
 .services-hero-title {
     font-size: 120px;
     font-weight: 700;
-    color: #000;
+    color: #0B1F3B;
     line-height: 1;
     margin-bottom: 40px;
     letter-spacing: -0.04em;
@@ -54,7 +54,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #0B1F3B;
     padding-bottom: 8px;
     min-width: 200px;
 }
@@ -62,7 +62,7 @@
 .services-feature-bullet {
     width: 12px;
     height: 12px;
-    background-color: #999;
+    background-color: #2F80ED;
     border-radius: 50%;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .services-btn-primary {
-    background-color: #000;
+    background-color: #0B1F3B;
     color: #fff;
     border: none;
     padding: 16px 48px;
@@ -90,13 +90,13 @@
 }
 
 .services-btn-primary:hover {
-    background-color: #333;
+    background-color: #0d2647;
 }
 
 .services-btn-secondary {
     background-color: transparent;
-    border: 1px solid #ccc;
-    color: #666;
+    border: 1px solid #2F80ED;
+    color: #2F80ED;
     padding: 16px 48px;
     border-radius: 4px;
     font-size: 16px;
@@ -106,8 +106,9 @@
 }
 
 .services-btn-secondary:hover {
-    border-color: #000;
-    color: #000;
+    background-color: #e8f0fc;
+    border-color: #1a6fd4;
+    color: #1a6fd4;
 }
 
 @media (max-width: 992px) {

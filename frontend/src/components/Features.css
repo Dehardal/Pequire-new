@@ -16,7 +16,7 @@
 .features-title {
     font-size: 42px;
     font-weight: 700;
-    color: #000;
+    color: #0B1F3B;
     line-height: 1.2;
     margin-bottom: 20px;
 }
@@ -46,27 +46,30 @@
 .feature-icon-box {
     width: 100%;
     aspect-ratio: 1 / 1;
-    background-color: #FADADD;
-    /* Light pink */
+    background-color: #e8f0fc;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30%;
-    color: #000;
+    color: #0B1F3B;
     transition: transform 0.3s ease, background-color 0.3s ease;
     cursor: pointer;
 }
 
 .feature-icon-box:hover {
     transform: translateY(-5px);
-    background-color: #f7ced3;
+    background-color: #2F80ED;
 }
 
 .feature-icon-box svg {
     width: 100%;
     height: 100%;
-    stroke: #000;
+    stroke: #0B1F3B;
+}
+
+.feature-icon-box:hover svg {
+    stroke: #fff;
 }
 
 .feature-label {

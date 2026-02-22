@@ -12,7 +12,7 @@
     left: -150px;
     width: 400px;
     height: 400px;
-    background-color: #fbe3e6;
+    background-color: #e8f0fc;
     border-radius: 56% 44% 52% 48% / 48% 60% 40% 52%;
     z-index: 1;
     opacity: 0.8;
@@ -24,7 +24,7 @@
     right: -100px;
     width: 500px;
     height: 450px;
-    background-color: #fbe3e6;
+    background-color: #e8f0fc;
     border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
     z-index: 1;
     opacity: 0.8;
@@ -50,7 +50,7 @@
     flex: 1.5;
     font-size: 3.5rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #0B1F3B;
     line-height: 1.1;
 }
 

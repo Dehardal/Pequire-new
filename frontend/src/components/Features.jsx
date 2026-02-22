@@ -5,50 +5,45 @@ const Features = () => {
     const features = [
         {
             id: 1,
-            title: "Lorem ipsum dolor",
+            title: "AI-Powered Diagnosis",
+            description: "Not sure what's broken? Upload a photo and our AI identifies the problem for you. Get the right solution, every time.",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="8" cy="18" r="3" />
-                    <circle cx="16" cy="18" r="3" />
-                    <path d="M12 8v4M8 15l4-3 4 3" />
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                    <circle cx="12" cy="12" r="3" />
                 </svg>
             )
         },
         {
             id: 2,
-            title: "Lorem ipsum dolor",
+            title: "Verified Professionals",
+            description: "Every service provider is background-checked, trained, and performance-rated. Your home's safety is our priority.",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M3 17l6-6 4 4 8-8" />
-                    <path d="M17 7h4v4" />
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
             )
         },
         {
             id: 3,
-            title: "Lorem ipsum dolor",
+            title: "Transparent Pricing",
+            description: "See exactly what you'll pay before you book. No hidden charges, no surprises.",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M16 8a4 4 0 1 0-8 0" />
-                    <path d="M12 12v4" />
-                    <rect x="8" y="14" width="8" height="2" rx="1" />
-                    <path d="M10 18h4" />
-                    <path d="M7 10h1M16 10h1" />
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                    <path d="M12 6v2m0 8v2" />
                 </svg>
             )
         },
         {
             id: 4,
-            title: "Lorem ipsum dolor",
+            title: "Fast Response",
+            description: "Most bookings matched with a provider within 15 minutes. Service completed the same day.",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z" />
-                    <path d="M9 22h6" />
-                    <path d="M12 19v-2" />
-                    <path d="M12 7V5" />
-                    <path d="M8 8l-1.5-1.5" />
-                    <path d="M16 8l1.5-1.5" />
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                 </svg>
             )
         }
@@ -59,13 +54,10 @@ const Features = () => {
             <div className="features-container">
                 <div className="features-header">
                     <h2 className="features-title">
-                        Lorem ipsum dolor sit amet.
-                        <br />
-                        Lorem ipsum dolor
+                        Why choose Pequire
                     </h2>
                     <p className="features-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id
-                        ipsum vitae tortor tristique cursus eu sed sapien.
+                        Providing the most reliable household services with cutting edge technology.
                     </p>
                 </div>
 
@@ -75,7 +67,8 @@ const Features = () => {
                             <div className="feature-icon-box">
                                 {feature.icon}
                             </div>
-                            <p className="feature-label">{feature.title}</p>
+                            <h3 className="feature-label">{feature.title}</h3>
+                            <p className="feature-description">{feature.description}</p>
                         </div>
                     ))}
                 </div>

@@ -15,7 +15,7 @@
 .testimonials-title {
     font-size: 56px;
     font-weight: 800;
-    color: #000;
+    color: #0B1F3B;
     margin-bottom: 5px;
     letter-spacing: -0.04em;
     line-height: 1.1;
@@ -24,7 +24,7 @@
 .testimonials-subtitle {
     font-size: 48px;
     font-weight: 800;
-    color: #000;
+    color: #0B1F3B;
     margin-bottom: 24px;
     letter-spacing: -0.04em;
     line-height: 1.1;
@@ -68,8 +68,8 @@
     height: 440px;
     transform-style: preserve-3d;
     /* Center the stage - the cards will fan out from here */
-    transform: translateX(-240px);
-    /* Adjust to center the 160px * 3 spread */
+    transform: translateX(-320px);
+    /* Adjust for 5 visible cards (4 gaps of 160px) */
 }
 
 .deck-card {
@@ -130,7 +130,7 @@
 
 .card-back {
     transform: rotateY(180deg);
-    background-color: #000;
+    background-color: #0B1F3B;
     color: #fff;
     padding: 30px;
     display: flex;
@@ -155,7 +155,7 @@
 .card-subtitle {
     font-size: 26px;
     font-weight: 800;
-    color: #000;
+    color: #0B1F3B;
     line-height: 1.1;
     letter-spacing: -0.04em;
 }
@@ -173,7 +173,7 @@
 }
 
 .card-footer {
-    background: #000;
+    background: #0B1F3B;
     padding: 15px;
     text-align: center;
 }
@@ -210,7 +210,7 @@
     height: 65px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    background: #000;
+    background: #0B1F3B;
     color: #fff;
     display: flex;
     align-items: center;
@@ -219,7 +219,7 @@
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     font-size: 28px;
     z-index: 200;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(11, 31, 59, 0.25);
 }
 
 .abs-nav-btn.prev {
@@ -231,7 +231,7 @@
 }
 
 .abs-nav-btn:hover {
-    background: #222;
+    background: #2F80ED;
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -239,12 +239,8 @@
     transform: translateY(-50%) scale(0.95);
 }
 
-/* Seamless Loop - Hide the jump */
-.deck-card.moving-back {
-    opacity: 0 !important;
-    transition: opacity 0.3s ease, transform 0s;
-    pointer-events: none;
-}
+/* Seamless Loop - We now allow the card to slide back behind others */
+/* z-index jump is handled by the state update, transition animates the slide behind. */
 
 /* Pill Control Container */
 .deck-controls-container {
@@ -256,32 +252,32 @@
 
 .section-pill-btn {
     background: #fff;
-    color: #000;
-    border: 2px solid #000;
+    color: #0B1F3B;
+    border: 2px solid #0B1F3B;
     padding: 16px 50px;
     border-radius: 40px;
     font-weight: 800;
     font-size: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 0 #000;
+    box-shadow: 0 5px 0 #0B1F3B;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .section-pill-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 0 #000;
+    box-shadow: 0 8px 0 #0B1F3B;
 }
 
 .section-pill-btn:active {
     transform: translateY(2px);
-    box-shadow: 0 2px 0 #000;
+    box-shadow: 0 2px 0 #0B1F3B;
 }
 
 @media (max-width: 1024px) {
     .deck-stage {
-        transform: translateX(-150px);
+        transform: translateX(-200px);
     }
 
     .deck-card {

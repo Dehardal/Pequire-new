@@ -3,47 +3,61 @@ import './OurServices.css';
 
 const OurServices = () => {
     const serviceData = [
-        {
-            id: '01',
-            name: 'Carpenter',
-            points: [
-                { label: 'About', content: 'Our master carpenters bring decades of experience in high-end woodworking and structural timber.' },
-                { label: 'Service Description', content: 'From intricate cabinetry to structural home framing, we provide reliable, detailed craftsmanship that stands the test of time.' },
-                { label: 'Expertise', content: 'Cabinet Making, Wood Restoration, Structural Framing, Custom Furniture.' },
-                { label: 'Gallery', content: 'Explore our recent woodwork projects and bespoke furniture designs.', type: 'gallery', images: ['https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=400', 'https://images.unsplash.com/photo-1581092160562-40ca08e59814?q=80&w=400'] }
-            ]
-        },
-        {
-            id: '02',
-            name: 'Plumber',
-            points: [
-                { label: 'About', content: 'Certified plumbing experts specializing in modern water systems and sustainable drainage solutions.' },
-                { label: 'Service Description', content: 'We handle everything from minor leaks to complete industrial plumbing overhauls with precision and speed.' },
-                { label: 'Expertise', content: 'Leak Detection, Pipe Relining, Water Heaters, Emergency Plumbing.' },
-                { label: 'Gallery', content: 'View our clean installations and professional repair work.', type: 'gallery', images: ['https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=400', 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=400'] }
-            ]
-        },
-        {
-            id: '03',
-            name: 'Electrician',
-            points: [
-                { label: 'About', content: 'Licensed electricians focused on safety, efficiency, and modern smart home integrations.' },
-                { label: 'Service Description', content: 'Whether it is a simple outlet fix or a full commercial wiring project, we ensure everything is up to code.' },
-                { label: 'Expertise', content: 'Smart Home Setup, Fault Finding, EV Charger Install, Rewiring.' },
-                { label: 'Gallery', content: 'Showcasing our precision wiring and smart lighting solutions.', type: 'gallery', images: ['https://images.unsplash.com/photo-1581092162384-8987c1d64718?q=80&w=400', 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=400'] }
-            ]
-        },
-        {
-            id: '04',
-            name: 'Laundry',
-            points: [
-                { label: 'About', content: 'Premium garment care services utilizing eco-friendly techniques and quick turnarounds.' },
-                { label: 'Service Description', content: 'We treat your clothes with the utmost care, ensuring they return to you fresh, crisp, and perfectly handled.' },
-                { label: 'Expertise', content: 'Dry Cleaning, Silk Care, Curtain Cleaning, Bulk Laundry.' },
-                { label: 'Gallery', content: 'See the results of our professional fabric care and finishing.', type: 'gallery', images: ['https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=400', 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=400'] }
-            ]
-        }
-    ];
+    {
+        id: '01',
+        name: 'Plumbing',
+        points: [
+            { label: 'What we fix', content: 'Leak repairs, pipe installations, bathroom fittings, water heater service' },
+            { label: 'Starting from', content: '₹299' },
+            { label: 'Average completion time', content: '1-2 hours' }
+        ]
+    },
+    {
+        id: '02',
+        name: 'Electrical',
+        points: [
+            { label: 'What we fix', content: 'Wiring, switch repairs, appliance installation, circuit breaker fixes' },
+            { label: 'Starting from', content: '₹249' },
+            { label: 'Average completion time', content: '30 mins - 2 hours' }
+        ]
+    },
+    {
+        id: '03',
+        name: 'Carpentry',
+        points: [
+            { label: 'What we fix', content: 'Furniture assembly, door/window repairs, custom woodwork' },
+            { label: 'Starting from', content: '₹399' },
+            { label: 'Average completion time', content: '2-4 hours' }
+        ]
+    },
+    {
+        id: '04',
+        name: 'Painting',
+        points: [
+            { label: 'What we cover', content: 'Interior/exterior painting, wall repairs, texture work' },
+            { label: 'Starting from', content: '₹15/sq ft' },
+            { label: 'Average completion time', content: '1-3 days' }
+        ]
+    },
+    {
+        id: '05',
+        name: 'Home Cleaning',
+        points: [
+            { label: 'What we clean', content: 'Deep cleaning, regular maintenance, move-in/out cleaning' },
+            { label: 'Starting from', content: '₹899' },
+            { label: 'Average completion time', content: '2-4 hours' }
+        ]
+    },
+    {
+        id: '06',
+        name: 'Appliance Repair',
+        points: [
+            { label: 'What we repair', content: 'AC, refrigerator, washing machine, microwave repairs' },
+            { label: 'Starting from', content: '₹299 (diagnosis)' },
+            { label: 'Average completion time', content: '1-2 hours' }
+        ]
+    }
+];
 
     const flatPoints = serviceData.flatMap(service =>
         service.points.map(point => ({

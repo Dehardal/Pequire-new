@@ -15,14 +15,15 @@ const CareerHero = () => {
 
             <div className="hero-container">
                 <h1 className="hero-headline">
-                    Lorem ipsum dolor <span className="pill-shape"></span> sit amet, adipiscing elit. Morbi id ipsum vitae tortor tristique cursus eu sed sapien.
+                    Build the future of <span className="pill-shape"></span> home services with us
                 </h1>
                 <p className="hero-subheadline">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ipsum vitae tortor tristique cursus eu sed sapien. Sed pellentesque odio nisi.
+                    Join a fast-growing team that's making household maintenance 
+                    simple for millions of Indians.
                 </p>
                 <div className="hero-actions">
-                    <button className="btn-black">Primary</button>
-                    <button className="btn-outline">Secondary</button>
+                    <button className="btn btn-primary">View Openings</button>
+                    <button className="btn btn-secondary">Join as Provider</button>
                 </div>
             </div>
         </section>

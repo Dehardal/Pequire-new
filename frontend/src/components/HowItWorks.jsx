@@ -4,31 +4,31 @@ import './HowItWorks.css';
 const steps = [
     {
         id: '01',
-        title: 'Strategy & Planning',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ipsum vitae tortor tristique cursus eu sed sapien.',
-        image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop',
-        displayTitle: ['Lorem ipsum', 'dolor sit amet.', 'Lorem ipsum']
+        title: 'Upload the Problem',
+        description: "Take a photo or describe what's broken. Our AI analyzes it instantly.",
+        image: 'https://images.unsplash.com/photo-1581094794329-c8112a4e5190?q=80&w=2070&auto=format&fit=crop',
+        displayTitle: ['Fix anything', 'in 4 simple steps']
     },
     {
         id: '02',
-        title: 'Creative Design',
-        description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.',
-        image: 'https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=2072&auto=format&fit=crop',
-        displayTitle: ['Design Focus', 'creative path.', 'Visuals']
+        title: 'Get Instant Diagnosis',
+        description: 'We identify the issue and suggest the right service category with a price estimate.',
+        image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop',
+        displayTitle: ['Fix anything', 'in 4 simple steps']
     },
     {
         id: '03',
-        title: 'Development',
-        description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        image: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=2076&auto=format&fit=crop',
-        displayTitle: ['Pure Code', 'efficient builds.', 'Launch']
+        title: 'Book a Professional',
+        description: 'Choose from verified providers near you. See their ratings, experience, and availability.',
+        image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop',
+        displayTitle: ['Fix anything', 'in 4 simple steps']
     },
     {
         id: '04',
-        title: 'Evaluation',
-        description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        image: 'https://images.unsplash.com/photo-1522812905030-d88691515281?q=80&w=2070&auto=format&fit=crop',
-        displayTitle: ['Quality Check', 'final review.', 'Success']
+        title: 'Get It Fixed',
+        description: 'Your provider arrives on time, fixes the problem, and you pay securely through the app.',
+        image: 'https://images.unsplash.com/photo-1504148455328-497c596d2290?q=80&w=2070&auto=format&fit=crop',
+        displayTitle: ['Fix anything', 'in 4 simple steps']
     }
 ];
 

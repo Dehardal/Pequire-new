@@ -12,12 +12,23 @@ const OfferBanner = () => {
             <div className="offer-container">
                 <header className="offer-header">
                     <h2 className="offer-title">
-                        Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                        Ready to fix your problem?
                     </h2>
                     <p className="offer-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Morbi id ipsum vitae tortor tristique cursus eu sed sapien.
+                        Join thousands of homeowners who've solved their household 
+                        problems with Pequire. Upload your issue and get matched with 
+                        a verified professional today.
                     </p>
+                    <div className="offer-actions" style={{ marginTop: '2rem' }}>
+                        <button className="btn btn-primary">Get Started Now</button>
+                        <p className="secondary-text" style={{ 
+                            marginTop: '1rem', 
+                            fontSize: '0.9rem', 
+                            color: 'var(--neutral-400)' 
+                        }}>
+                            No subscription required. Pay only for services you book.
+                        </p>
+                    </div>
                 </header>
 
                 <div className="offer-image-container">

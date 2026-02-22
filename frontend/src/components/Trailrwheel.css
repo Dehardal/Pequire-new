@@ -14,7 +14,7 @@
 .trailrwheel-header h3 {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #0B1F3B;
     line-height: 1.2;
 }
 
@@ -52,7 +52,7 @@
     transform: translateX(-50%);
     width: 760px;
     height: 760px;
-    border: 3px solid #ffdeee;
+    border: 3px solid #e8f0fc;
     border-radius: 50%;
     pointer-events: none;
     z-index: 0;
@@ -78,7 +78,7 @@
 .wheel-avatar-box.active {
     width: 120px;
     height: 120px;
-    box-shadow: 0 10px 30px rgba(255, 107, 129, 0.3);
+    box-shadow: 0 10px 30px rgba(47, 128, 237, 0.3);
     border: 4px solid #fff;
     z-index: 10;
 }
@@ -105,7 +105,7 @@
 }
 
 .quote-box {
-    background-color: #ffeff5;
+    background-color: #e8f0fc;
     padding: 1.2rem 2rem;
     border-radius: 12px;
     max-width: 400px;
@@ -119,8 +119,8 @@
     top: 5px;
     left: 15px;
     font-size: 4rem;
-    color: #000;
-    opacity: 0.8;
+    color: #0B1F3B;
+    opacity: 0.1;
 }
 
 .quote-icon-bottom {
@@ -128,13 +128,14 @@
     bottom: -15px;
     right: 15px;
     font-size: 4rem;
-    color: #000;
+    color: #2F80ED;
+    opacity: 0.2;
 }
 
 .quote-author-name {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #0B1F3B;
     margin-bottom: 0.4rem;
 }
 

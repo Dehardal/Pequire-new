@@ -43,8 +43,7 @@
 .hero-headline {
     font-size: 56px;
     font-weight: 800;
-    /* Extra Bold as per image feel */
-    color: #000;
+    color: #0B1F3B;
     line-height: 1.1;
     word-spacing: normal;
     letter-spacing: -0.03em;
@@ -64,8 +63,7 @@
 
 .hero-subheadline {
     font-size: 32px;
-    color: #4A3B32;
-    /* Match the dark brown/orange from the image */
+    color: #2F80ED;
     line-height: 1.4;
     word-spacing: normal;
     letter-spacing: normal;
@@ -80,7 +78,7 @@
 }
 
 .btn-black {
-    background-color: #000;
+    background-color: #2F80ED;
     color: #fff;
     padding: 16px 45px;
     border-radius: 4px;
@@ -92,24 +90,24 @@
 }
 
 .btn-black:hover {
-    background-color: #222;
+    background-color: #1a6fd4;
     transform: translateY(-2px);
 }
 
 .btn-outline {
     background-color: transparent;
-    color: #000;
+    color: #0B1F3B;
     padding: 16px 45px;
     border-radius: 4px;
     font-size: 18px;
     font-weight: 500;
-    border: 1px solid #000;
+    border: 1px solid #0B1F3B;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .btn-outline:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #e8f0fc;
     transform: translateY(-2px);
 }
 
