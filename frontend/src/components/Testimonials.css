@@ -64,12 +64,11 @@
 
 .deck-stage {
     position: relative;
-    width: 320px;
-    height: 440px;
+    width: 280px;
+    height: 380px;
     transform-style: preserve-3d;
-    /* Center the stage - the cards will fan out from here */
-    transform: translateX(-320px);
-    /* Adjust for 5 visible cards (4 gaps of 160px) */
+    /* Center the stage - adjusted for 5 compact cards */
+    transform: translateX(-160px);
 }
 
 .deck-card {
@@ -80,9 +79,9 @@
     transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
     transform-style: preserve-3d;
 
-    left: calc(var(--position) * 160px);
+    left: calc(var(--position) * 80px);
     transform:
-        translateX(0) translateZ(calc(var(--position) * -180px)) rotateZ(var(--rotation));
+        translateX(0) translateZ(calc(var(--position) * -120px)) rotateZ(var(--rotation));
     opacity: calc(1 - (var(--position) * 0.15));
 }
 
@@ -153,7 +152,7 @@
 
 .card-title,
 .card-subtitle {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 800;
     color: #0B1F3B;
     line-height: 1.1;
@@ -218,16 +217,16 @@
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     font-size: 28px;
-    z-index: 200;
+    z-index: 500;
     box-shadow: 0 10px 30px rgba(11, 31, 59, 0.25);
 }
 
 .abs-nav-btn.prev {
-    left: 20px;
+    left: 60px;
 }
 
 .abs-nav-btn.next {
-    right: 20px;
+    right: 60px;
 }
 
 .abs-nav-btn:hover {
