@@ -64,11 +64,6 @@ const Navbar = () => {
                             Careers
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/about" className={`navbar-link ${isActive('/about') ? 'active' : ''}`}>
-                            About Us
-                        </Link>
-                    </li>
                 </ul>
 
                 <Link to="/contact" className="navbar-btn">

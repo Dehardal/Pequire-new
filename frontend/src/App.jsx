@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Careers from './pages/Careers';
 import Services from './pages/Services';
 import HowToUse from './pages/HowToUse';
-import About from './pages/About';
 import './styles/App.css';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
                         <Route path="/services" element={<Services />} />
                         <Route path="/how-to-use" element={<HowToUse />} />
                         <Route path="/careers" element={<Careers />} />
-                        <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Home />} />
                     </Routes>
                 </main>
