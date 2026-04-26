@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-import Logo from '../assets/Logo.png';
-import Wordmark from '../assets/wordmark.png';
+import Logo from '../assets/logo.webp';
+import Wordmark from '../assets/wordmark.webp';
 
 const Navbar = () => {
     const location = useLocation();
@@ -60,18 +60,20 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/careers" className={`navbar-link ${isActive('/careers') ? 'active' : ''}`}>
-                            Careers
-                        </Link>
+                        <a href="https://onboard.pequire.com" className="navbar-link">
+                            Become a Pro
+                        </a>
                     </li>
                 </ul>
 
-                <Link to="/contact" className="navbar-btn">
-                    Contact Us
-                </Link>
+                <a href="https://booking.pequire.com" className="navbar-btn">
+                    Book Now
+                </a>
             </div>
         </nav>
     );
 };
 
 export default Navbar;
+
+

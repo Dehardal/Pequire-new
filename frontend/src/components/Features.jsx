@@ -16,34 +16,33 @@ const Features = () => {
         },
         {
             id: 2,
-            title: "Verified Professionals",
-            description: "Every service provider is background-checked, trained, and performance-rated. Your home's safety is our priority.",
+            title: "Professional Streaks",
+            description: "Build confidence with our high-streak professionals. Top-rated providers earn streaks for consistent, reliable, and high-quality service.",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                    <polyline points="22 4 12 14.01 9 11.01" />
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
             )
         },
         {
             id: 3,
-            title: "Transparent Pricing",
-            description: "See exactly what you'll pay before you book. No hidden charges, no surprises.",
+            title: "Real-Time Tracking",
+            description: "Watch your service provider arrive in real-time. Full transparency from the moment they start their journey to your doorstep.",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
-                    <path d="M12 6v2m0 8v2" />
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
                 </svg>
             )
         },
         {
             id: 4,
-            title: "Fast Response",
-            description: "Most bookings matched with a provider within 15 minutes. Service completed the same day.",
+            title: "Engagement Rewards",
+            description: "Earn reward points for every successful booking. Complete your profile and maintain your own streak to unlock exclusive benefits.",
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v8M8 12h8" />
                 </svg>
             )
         }

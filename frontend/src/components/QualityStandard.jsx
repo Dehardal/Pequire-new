@@ -1,7 +1,7 @@
 import React from 'react';
 import './QualityStandard.css';
-// Using SP_image.png as placeholder, user should replace with carpenter.png
-import QualityImage from '../assets/Quality_image.png';
+// Using SP_image.webp as placeholder, user should replace with carpenter.png
+import QualityImage from '../assets/Quality_image.webp';
 
 const QualityStandard = () => {
     return (
@@ -35,3 +35,5 @@ const QualityStandard = () => {
 };
 
 export default QualityStandard;
+
+

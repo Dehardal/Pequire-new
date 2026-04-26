@@ -1,6 +1,6 @@
 import React from 'react';
 import './OfferBanner.css';
-import bannerImage from '../assets/Banner.png';
+import bannerImage from '../assets/Banner.webp';
 
 const OfferBanner = () => {
     return (
@@ -44,3 +44,4 @@ const OfferBanner = () => {
 };
 
 export default OfferBanner;
+

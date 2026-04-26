@@ -2,9 +2,9 @@ import React from 'react';
 import './Footer.css';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-import Logo from '../assets/Logo.png';
-import Wordmark from '../assets/wordmark.png';
-import Letters from '../assets/Letters.png';
+import Logo from '../assets/logo.webp';
+import Wordmark from '../assets/wordmark.webp';
+import Letters from '../assets/Letters.webp';
 
 const Footer = () => {
     return (
@@ -17,7 +17,7 @@ const Footer = () => {
                             <img src={Wordmark} alt="Pequire" className="footer-wordmark-img" />
                         </div>
                         <p className="footer-desc">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ipsum vitae tortor tristique cursus.
+                            Pequire is an AI-powered household service platform that connects you with verified professionals instantly. Problem identified, solved, and rewarded.
                         </p>
                         <div className="social-links">
                             <a href="#" className="social-icon facebook"><FaFacebook /></a>
@@ -42,8 +42,8 @@ const Footer = () => {
                         <ul>
                             <li><NavLink to="/how-to-use">How to Use</NavLink></li>
                             <li><NavLink to="/services">Services Near You</NavLink></li>
-                            <li><NavLink to="/careers">Join as Provider</NavLink></li>
-                            <li><a href="#">Download App</a></li>
+                            <li><a href="https://onboard.pequire.com">Join as Provider</a></li>
+                            <li><a href="https://booking.pequire.com">Download App</a></li>
                             <li><a href="#">Help & Support</a></li>
                         </ul>
                     </div>
@@ -88,3 +88,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+

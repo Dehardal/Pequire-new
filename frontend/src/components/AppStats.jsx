@@ -1,6 +1,6 @@
 import React from 'react';
 import './AppStats.css';
-import appMockup from '../assets/App.png';
+import appMockup from '../assets/App.webp';
 
 const AppStats = () => {
     return (
@@ -10,21 +10,21 @@ const AppStats = () => {
 
             <div className="app-stats-container">
                 <header className="stats-header">
-                    <h2 className="stats-main-title">Lorem ipsum dolor sit amet.</h2>
+                    <h2 className="stats-main-title">Join thousands of happy homeowners.</h2>
                 </header>
 
                 <div className="stats-grid">
                     <div className="stat-item">
-                        <span className="stat-number">4+</span>
-                        <p className="stat-label">Lorem ipsum</p>
+                        <span className="stat-number">4.8★</span>
+                        <p className="stat-label">Average Service Rating</p>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-number">7K+</span>
-                        <p className="stat-label">Lorem ipsum</p>
+                        <span className="stat-number">200+</span>
+                        <p className="stat-label">Verified Professionals</p>
                     </div>
                     <div className="stat-item">
-                        <span className="stat-number">40K+</span>
-                        <p className="stat-label">Lorem ipsum</p>
+                        <span className="stat-number">500+</span>
+                        <p className="stat-label">Successful Services</p>
                     </div>
                 </div>
 
@@ -37,3 +37,4 @@ const AppStats = () => {
 };
 
 export default AppStats;
+

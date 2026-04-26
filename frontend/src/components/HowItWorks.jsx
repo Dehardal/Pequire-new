@@ -25,8 +25,8 @@ const steps = [
     },
     {
         id: '04',
-        title: 'Get It Fixed',
-        description: 'Your provider arrives on time, fixes the problem, and you pay securely through the app.',
+        title: 'Complete & Rate to Earn',
+        description: 'Your provider fixes the problem. Rate the service to build your streak and earn reward points for future discounts!',
         image: 'https://images.unsplash.com/photo-1504148455328-497c596d2290?q=80&w=2070&auto=format&fit=crop',
         displayTitle: ['Fix anything', 'in 4 simple steps']
     }
@@ -37,7 +37,7 @@ const HowItWorks = () => {
     const activeStep = steps.find(s => s.id === activeId);
 
     return (
-        <section className="how-section">
+        <section className="how-section" id="how-it-works">
             <div className="how-container">
                 {/* Steps Grid */}
                 <div className="steps-grid">

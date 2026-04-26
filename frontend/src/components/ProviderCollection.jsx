@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProviderCollection.css';
-import providerImg from '../assets/Provider.png';
+import providerImg from '../assets/Provider.webp';
 
 const ProviderCollection = () => {
     return (
@@ -36,3 +36,4 @@ const ProviderCollection = () => {
 };
 
 export default ProviderCollection;
+

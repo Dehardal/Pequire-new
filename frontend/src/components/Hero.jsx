@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
-import workersImage from '../assets/SP_image.png';
-import toolboxImage from '../assets/toolbox.png';
+import workersImage from '../assets/SP_image.webp';
+import toolboxImage from '../assets/toolbox.webp';
 
 const Hero = () => {
     return (
@@ -31,8 +31,8 @@ const Hero = () => {
                     minutes. From plumbing to electrical work, get it fixed today.
                 </p>
                 <div className="hero-buttons">
-                    <button className="btn btn-primary">Book a Service</button>
-                    <button className="btn btn-secondary">See How It Works</button>
+                    <button className="btn btn-primary" onClick={() => window.location.href = 'https://booking.pequire.com'}>Book a Service</button>
+                    <button className="btn btn-secondary" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}>See How It Works</button>
                 </div>
                 {/* Adding Trust Signal Bar as it's new in the specs */}
                 <div className="trust-signal-bar">
@@ -65,3 +65,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
