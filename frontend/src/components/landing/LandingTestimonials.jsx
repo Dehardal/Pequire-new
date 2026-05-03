@@ -103,10 +103,10 @@ const LandingTestimonials = () => {
 
             <div className="testi-content">
                 <div className="pill-badge-outline solution-badge">
-                    <span className="pill-dot blue-dot"></span> TESTIMONIALS
+                    <span className="pill-dot blue-dot"></span> OUR GOSSIPS
                 </div>
 
-                <h2 className="testi-headline">Voices of <span className="text-brand-blue">trust & excellence</span></h2>
+                <h2 className="testi-headline">Trusted by homeowners, <span className="text-brand-blue">Loved<br />by professionals</span></h2>
                 <p className="testi-subtitle">Trusted by homeowners, Loved by professionals. Real experiences from the people who matter most.</p>
 
 

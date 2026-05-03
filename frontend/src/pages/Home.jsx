@@ -8,6 +8,7 @@ import SolutionTimeline from '../components/landing/SolutionTimeline';
 import BentoFeatures from '../components/landing/BentoFeatures';
 import WhyPequire from '../components/landing/WhyPequire';
 import ProfessionalsCta from '../components/landing/ProfessionalsCta';
+import LandingTestimonials from '../components/landing/LandingTestimonials';
 import AppCta from '../components/landing/AppCta';
 
 const Home = () => {
@@ -44,6 +45,7 @@ const Home = () => {
             <BentoFeatures />
             <WhyPequire />
             <ProfessionalsCta />
+            <LandingTestimonials />
             <AppCta />
         </div>
     );
