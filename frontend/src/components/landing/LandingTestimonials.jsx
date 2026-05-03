@@ -148,10 +148,21 @@ const LandingTestimonials = () => {
                     {TESTIMONIALS.map((t, i) => (
                         <div
                             key={i}
-                            className={`testi-dot ${i === currentIndex ? 'active' : ''} ${t.type === 'pro' ? 'pro-dot' : ''}`}
+                            className={`testi-dot ${i === currentIndex ? 'active' : ''}`}
                             onClick={() => !isAnimating && setDirection(i > currentIndex ? 'next' : 'prev')}
                         ></div>
                     ))}
+                </div>
+
+                <div className="testi-type-indicator">
+                    <div className="testi-type-legend">
+                        <div className="testi-legend-swatch" style={{ background: '#fff', border: '1px solid #CBD5E1' }}></div>
+                        <span>Homeowner</span>
+                    </div>
+                    <div className="testi-type-legend">
+                        <div className="testi-legend-swatch" style={{ background: '#000814' }}></div>
+                        <span>Professional</span>
+                    </div>
                 </div>
 
                 <div className="testi-btn-row">

@@ -1,15 +1,18 @@
 .pro-conversion-section {
-    padding: 60px 0 120px;
+    padding: 100px 0;
+    background: #000814;
 }
 
 .pro-conv-card {
     position: relative;
-    background: #01173B;
-    border-radius: 40px;
-    padding: 100px 60px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 64px 40px;
     overflow: hidden;
     color: #fff;
     text-align: center;
+    margin-bottom: 56px;
 }
 
 .pro-conv-pattern {
@@ -28,10 +31,14 @@
 }
 
 .pro-pill {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    margin-bottom: 32px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .pro-conv-headline {
@@ -44,7 +51,34 @@
 .pro-conv-sub {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 32px;
+}
+
+.pro-conv-trust {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
     margin-bottom: 48px;
+}
+
+.pct-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.pct-item svg {
+    color: #025EF3;
+}
+
+.pct-sep {
+    width: 1px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .pro-conv-btns {
@@ -70,7 +104,86 @@
 
 @media (max-width: 768px) {
     .pro-conv-card { padding: 60px 24px; }
+    .pro-conv-trust { flex-direction: column; gap: 16px; }
+    .pct-sep { display: none; }
     .pro-conv-btns { flex-direction: column; }
     .pro-conv-stats { flex-direction: column; gap: 40px; }
     .pcs-sep { display: none; }
+}
+
+.btn-link {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.btn-link:hover {
+    color: #025EF3;
+}
+
+/* Benefits Grid */
+.pro-benefits-section {
+    padding-top: 0;
+}
+
+.pro-benefits-heading {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 28px;
+}
+
+.pro-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.pro-benefit-card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 28px 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.25s ease;
+    text-align: center;
+}
+
+.pro-benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    border-color: #025EF3;
+}
+
+.pbc-icon {
+    width: 48px;
+    height: 48px;
+    background: #025EF3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0 auto 16px;
+}
+
+.pro-benefit-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.pro-benefit-card p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .pro-benefits-grid { grid-template-columns: 1fr; }
 }
