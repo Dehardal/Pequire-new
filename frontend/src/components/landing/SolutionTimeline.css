@@ -1,0 +1,268 @@
+.solution-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.solution-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.timeline-steps {
+    flex: 1;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 45px;
+    bottom: 0;
+    width: 2px;
+    background: #e2e8f0;
+    z-index: 1;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    background: #025EF3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 4px rgba(2, 94, 243, 0.1), 0 10px 25px rgba(2, 94, 243, 0.2);
+    border: 3px solid #fff;
+}
+
+
+.timeline-num {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.timeline-body h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #0b182e;
+}
+
+.timeline-body p {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Solution Visual / Mockup */
+.solution-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.sol-app-mockup {
+    width: 340px;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border: 8px solid #f8fafc;
+}
+
+.sol-mockup-header {
+    background: #f8fafc;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mockup-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.md {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.md.red { background: #ff5f57; }
+.md.yellow { background: #febc2e; }
+.md.green { background: #28c840; }
+
+.mockup-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.sol-mockup-body {
+    padding: 24px;
+}
+
+.sol-upload-zone {
+    border: 2px dashed #e2e8f0;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.sol-upload-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b182e;
+    margin-top: 12px;
+}
+
+.sol-upload-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.sol-matched-card {
+    background: #F5F9FF;
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.sol-matched-info {
+    flex: 1;
+}
+
+.sol-matched-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0b182e;
+}
+
+.sol-matched-sub {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.sol-estimate-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.sol-est-box {
+    flex: 1;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.sol-est-label {
+    font-size: 10px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sol-est-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0b182e;
+    margin-top: 2px;
+}
+
+.sol-confirm-btn {
+    width: 100%;
+    padding: 14px;
+    background: #025EF3;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Value Cards */
+.solution-value-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.value-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+}
+
+.value-card-left {
+    width: 4px;
+    height: 40px;
+    background: #025EF3;
+    border-radius: 4px;
+}
+
+.value-card-body {
+    flex: 1;
+}
+
+.value-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0b182e;
+}
+
+.value-card-sub {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.value-card-check {
+    width: 32px;
+    height: 32px;
+    background: #00e880;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .solution-layout {
+        flex-direction: column;
+    }
+    .solution-value-cards {
+        grid-template-columns: 1fr;
+    }
+}

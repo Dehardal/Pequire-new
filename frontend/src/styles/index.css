@@ -7,10 +7,11 @@
 }
 
 :root {
-    /* Colors */
-    --primary-navy: #0B1F3B;
-    --secondary-blue-dark: #1F3C88;
-    --secondary-blue: #2F80ED;
+    /* Pequire Brand Colors */
+    --blue: #025EF3;
+    --navy: #01173B;
+    --navy2: #000814;
+    --coral: #ff4d4f;
     --accent-cyan: #22C7E6;
 
     /* Neutrals */
@@ -27,8 +28,8 @@
     --links: #3B82F6;
 
     /* Semantic Mappings */
-    --primary: var(--primary-navy);
-    --secondary: var(--secondary-blue);
+    --primary: var(--navy);
+    --secondary: var(--blue);
     --background: var(--neutral-100);
     --surface: var(--neutral-200);
     --text: var(--neutral-500);
@@ -50,84 +51,43 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Typography Scale */
-h1,
-.h1 {
+h1, .h1 {
     font-family: var(--font-primary);
     font-weight: 700;
     font-size: 56px;
     line-height: 1.1;
     letter-spacing: -0.04em;
-    color: var(--primary-navy);
+    color: var(--navy);
 }
 
-h2,
-.h2 {
+h2, .h2 {
     font-family: var(--font-primary);
     font-weight: 600;
     font-size: 40px;
     line-height: 1.2;
-    color: var(--primary-navy);
+    color: var(--navy);
 }
 
-h3,
-.h3 {
+h3, .h3 {
     font-family: var(--font-body);
     font-weight: 600;
     font-size: 28px;
-    color: var(--primary-navy);
+    color: var(--navy);
 }
 
-.body-large {
-    font-size: 20px;
-    font-weight: 400;
-}
+.body-large { font-size: 20px; font-weight: 400; }
+.body-medium { font-size: 18px; font-weight: 400; }
+.body-small { font-size: 16px; font-weight: 400; }
+.caption { font-size: 14px; font-weight: 400; }
 
-.body-medium {
-    font-size: 18px;
-    font-weight: 400;
-}
+.on-dark { color: #FFFFFF; }
+.on-dark h1, .on-dark h2, .on-dark h3 { color: #FFFFFF; }
+.on-dark p { color: var(--neutral-200); }
+.on-dark a { color: var(--accent-cyan); font-weight: 500; }
 
-.body-small {
-    font-size: 16px;
-    font-weight: 400;
-}
+.on-light p { color: var(--neutral-500); }
+.on-light a { color: var(--blue); font-weight: 500; }
 
-.caption {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-/* Pairing Helpers */
-.on-dark {
-    color: #FFFFFF;
-}
-
-.on-dark h1,
-.on-dark h2,
-.on-dark h3 {
-    color: #FFFFFF;
-}
-
-.on-dark p {
-    color: var(--neutral-200);
-}
-
-.on-dark a {
-    color: var(--accent-cyan);
-    font-weight: 500;
-}
-
-.on-light p {
-    color: var(--neutral-500);
-}
-
-.on-light a {
-    color: var(--secondary-blue);
-    font-weight: 500;
-}
-
-/* Buttons */
 .btn {
     font-family: var(--font-body);
     font-weight: 600;
@@ -142,47 +102,31 @@ h3,
     justify-content: center;
 }
 
-.btn-primary {
-    background: var(--secondary-blue);
-    color: #FFFFFF;
-}
-
-.btn-primary:hover {
-    background: var(--secondary-blue-dark);
-}
+.btn-primary { background: var(--blue); color: #FFFFFF; }
+.btn-primary:hover { background: #0248BE; }
 
 .btn-secondary {
     background: #FFFFFF;
-    color: var(--secondary-blue);
-    border: 2px solid var(--secondary-blue);
+    color: var(--blue);
+    border: 2px solid var(--blue);
 }
 
-.btn-secondary:hover {
-    background: var(--neutral-200);
-}
+.btn-secondary:hover { background: var(--neutral-200); }
 
-#root {
-    min-height: 100vh;
-}
-
-a {
-    transition: color 0.3s ease;
-}
+#root { min-height: 100vh; }
+a { transition: color 0.3s ease; text-decoration: none; }
 
 @media (max-width: 768px) {
+    h1, .h1 { font-size: 36px; }
+    h2, .h2 { font-size: 28px; }
+    h3, .h3 { font-size: 24px; }
+}
 
-    h1,
-    .h1 {
-        font-size: 36px;
-    }
-
-    h2,
-    .h2 {
-        font-size: 28px;
-    }
-
-    h3,
-    .h3 {
-        font-size: 24px;
-    }
+.section-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(15, 23, 42, 0.015) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+    pointer-events: none;
 }

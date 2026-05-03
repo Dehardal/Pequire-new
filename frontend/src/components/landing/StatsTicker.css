@@ -1,0 +1,39 @@
+.stats-bar-inline {
+    background: #0b182e;
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.stats-ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: tickerScroll 40s linear infinite;
+    gap: 0;
+}
+
+.stats-ticker span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0 20px;
+}
+
+.stats-ticker .dot {
+    color: #025EF3;
+    font-size: 1.8rem;
+    padding: 0 10px;
+}
+
+@keyframes tickerScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+

@@ -1,0 +1,120 @@
+.problem-section {
+    background: #fcebeb;
+    padding: 100px 0 80px;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section-head.center {
+    text-align: center;
+}
+
+.pill-badge-outline.danger {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 77, 79, 0.25);
+    border-radius: 999px;
+    background: #fff;
+    color: #ff4d4f;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.pill-dot.red {
+    width: 6px;
+    height: 6px;
+    background: #ff4d4f;
+    border-radius: 50%;
+}
+
+h2.problem-title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    color: #0b182e;
+    margin-bottom: 16px;
+}
+
+span.text-coral {
+    color: #ff4d4f;
+}
+
+.prob-icon-wrap.clock-red {
+    background: #fff5f5;
+    color: #ff3b3b;
+}
+
+
+span.text-coral {
+    color: #ff4d4f;
+}
+
+p.problem-sub {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 680px;
+    margin: 0 auto 64px;
+    line-height: 1.6;
+}
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.prob-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.prob-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.prob-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.prob-icon-wrap.i-red { background: #fff5f5; color: #ef4444; }
+.prob-icon-wrap.i-orange { background: #fff9f0; color: #f59e0b; }
+.prob-icon-wrap.i-blue { background: #f0f7ff; color: #3b82f6; }
+.prob-icon-wrap.i-purple { background: #f5f3ff; color: #8b5cf6; }
+
+
+.prob-card h4 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #0a1128;
+}
+
+.prob-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+}

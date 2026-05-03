@@ -1,10 +1,9 @@
 .process-section {
     padding: 80px 40px 80px 0;
-    background-color: #fff;
-    /* Removed overflow: hidden and fixed height to allow global scrolling */
-    /* height: 130vh; */
+    background-color: #000814;
     position: relative;
 }
+
 
 .process-wrapper {
     width: 100%;
@@ -79,10 +78,11 @@
 }
 
 .fixed-dot.active .step-label {
-    color: #0B1F3B;
+    color: #fff;
     font-weight: 700;
     font-size: 16px;
 }
+
 
 /* Dot Positioning (Shifted +50px right) */
 .dot-1 {
@@ -165,9 +165,11 @@
 .content-image {
     flex: 0 0 320px;
     height: 220px;
-    background-color: #e8f0fc;
-    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
 }
+
 
 .content-text {
     flex: 1;
@@ -176,17 +178,18 @@
 }
 
 .content-text h3 {
-    font-size: 18px;
-    color: #0B1F3B;
-    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+    color: #fff;
+    margin: 0 0 12px 0;
 }
 
 .content-text p {
-    font-size: 14px;
+    font-size: 0.95rem;
     line-height: 1.7;
-    color: #555;
+    color: #94a3b8;
     margin: 0;
 }
+
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
