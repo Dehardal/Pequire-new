@@ -32,29 +32,11 @@ const OurServices = () => {
     },
     {
         id: '04',
-        name: 'Painting',
+        name: 'Laundry',
         points: [
-            { label: 'What we cover', content: 'Interior/exterior painting, wall repairs, texture work' },
-            { label: 'Starting from', content: '₹15/sq ft' },
-            { label: 'Average completion time', content: '1-3 days' }
-        ]
-    },
-    {
-        id: '05',
-        name: 'Home Cleaning',
-        points: [
-            { label: 'What we clean', content: 'Deep cleaning, regular maintenance, move-in/out cleaning' },
-            { label: 'Starting from', content: '₹899' },
-            { label: 'Average completion time', content: '2-4 hours' }
-        ]
-    },
-    {
-        id: '06',
-        name: 'Appliance Repair',
-        points: [
-            { label: 'What we repair', content: 'AC, refrigerator, washing machine, microwave repairs' },
-            { label: 'Starting from', content: '₹299 (diagnosis)' },
-            { label: 'Average completion time', content: '1-2 hours' }
+            { label: 'What we cover', content: 'Stain removal, professional ironing, dry cleaning, general wash' },
+            { label: 'Starting from', content: '₹99' },
+            { label: 'Average completion time', content: '24-48 hours' }
         ]
     }
 ];
