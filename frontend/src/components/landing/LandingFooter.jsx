@@ -60,10 +60,10 @@ const LandingFooter = () => {
 
                     <div className="footer-col">
                         <div className="footer-col-head">Legal Links</div>
-                        <a href="#">Privacy & Policy</a>
-                        <a href="#">Refund & Cancellation Policy</a>
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Support & Help</a>
+                        <Link to="/privacy">Privacy & Policy</Link>
+                        <Link to="/refund-policy">Refund & Cancellation Policy</Link>
+                        <Link to="/terms">Terms & Conditions</Link>
+                        <Link to="/support">Support & Help</Link>
                     </div>
                 </div>
             </div>
