@@ -13,7 +13,7 @@ const LandingFooter = () => {
                 <div className="footer-top">
                     <div className="footer-brand">
                         <Link to="/" className="footer-logo">
-                            <img src={Logo} alt="PeQuire Logo" style={{ height: '32px', width: 'auto' }} />
+                            <img src={Logo} alt="PeQuire Logo" style={{ height: '28px', width: 'auto' }} />
                             <img src={wordmark} alt="PeQuire" className="footer-wordmark" />
                         </Link>
                         <p className="footer-desc">
