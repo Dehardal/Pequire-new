@@ -12,7 +12,7 @@
     border-radius: 999px;
     z-index: 1000;
     box-shadow: 0 4px 30px rgba(0, 0, 0, .2);
-    transition: all .4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .landing-navbar.hidden {
@@ -51,10 +51,44 @@
 .logo-wordmark {
     height: 20px;
     width: auto;
+    transition: all 0.3s ease;
+}
+
+/* Theme Specifics */
+.landing-navbar.theme-dark .logo-img,
+.landing-navbar.theme-dark .logo-wordmark {
     filter: brightness(0) invert(1);
     opacity: 0.9;
 }
 
+.landing-navbar.theme-light .logo-img,
+.landing-navbar.theme-light .logo-wordmark {
+    filter: none;
+    opacity: 1;
+}
+
+.landing-navbar.theme-light:not(.scrolled) {
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.landing-navbar.theme-light:not(.scrolled) .nav-links a {
+    color: rgba(1, 23, 59, 0.7);
+}
+
+.landing-navbar.theme-light:not(.scrolled) .nav-links a:hover,
+.landing-navbar.theme-light:not(.scrolled) .nav-links a.active {
+    color: #025EF3;
+}
+
+.landing-navbar.theme-light:not(.scrolled) .btn-nav-outline {
+    color: #01173B;
+    border-color: rgba(1, 23, 59, 0.2);
+}
+
+.landing-navbar.theme-light:not(.scrolled) .hamburger span {
+    background: #01173B;
+}
 
 .logo-dot { color: #025EF3; }
 

@@ -9,25 +9,23 @@
     width: 90%;
     margin: 0 auto;
     display: flex;
+    align-items: stretch;
     gap: 120px;
-    /* Increased gap */
 }
 
 /* Left Side - Sticky content */
 .services-left-side {
     flex: 0.8;
-    /* Slightly narrower left side */
     position: relative;
 }
 
 .services-sticky-content {
     position: sticky;
     top: 100px;
-    height: 75vh;
-    /* Taller sticky area for better flanking */
+    height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px 0;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './HowToUse.css';
-import wordmark from '../assets/wordmark.webp';
+import wordmark from '../assets/Wordmark.svg';
 import ProcessSection from '../components/ProcessSection';
 import SpecialFeatures from '../components/SpecialFeatures';
 

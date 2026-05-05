@@ -32,8 +32,24 @@ const LandingNavbar = () => {
     }, [lastScrollY]);
 
     const isActive = (path) => location.pathname === path;
-    const isLightPage = ['/services', '/careers'].includes(location.pathname);
-    const themeClass = isLightPage ? 'theme-light' : 'theme-dark';
+    
+    // Dynamic theme detection based on page and scroll position
+    const getTheme = () => {
+        if (location.pathname === '/') {
+            const y = window.scrollY;
+            // Home page specific ranges (Light themes)
+            if ((y > 650 && y < 1400) || (y > 1550 && y < 6200) || (y > 7800 && y < 8600)) {
+                return 'theme-light';
+            }
+            return 'theme-dark';
+        }
+        
+        // Other pages
+        const isLightPage = ['/services', '/careers'].includes(location.pathname);
+        return isLightPage ? 'theme-light' : 'theme-dark';
+    };
+
+    const themeClass = getTheme();
 
     return (
         <nav className={`landing-navbar ${scrolled ? 'scrolled' : ''} ${!visible ? 'hidden' : ''} ${themeClass}`}>
