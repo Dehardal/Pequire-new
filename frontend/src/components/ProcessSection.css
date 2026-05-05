@@ -165,9 +165,21 @@
 .content-image {
     flex: 0 0 320px;
     height: 220px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    color: #025EF3; /* Brand Blue */
+    transition: all 0.4s ease;
+}
+
+.content-row.active .content-image {
+    background-color: rgba(2, 94, 243, 0.05);
+    border-color: rgba(2, 94, 243, 0.3);
+    box-shadow: 0 10px 40px rgba(2, 94, 243, 0.1);
 }
 
 
