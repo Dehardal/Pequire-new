@@ -7,36 +7,40 @@ const OurServices = () => {
         id: '01',
         name: 'Plumbing',
         points: [
-            { label: 'What we fix', content: 'Leak repairs, pipe installations, bathroom fittings, water heater service' },
-            { label: 'Starting from', content: '₹299' },
-            { label: 'Average completion time', content: '1-2 hours' }
+            { label: 'Advanced Leak Detection', content: 'Our master plumbers utilize precision diagnostics to identify and resolve hidden leaks, preventing structural damage and reducing water waste instantly.' },
+            { label: 'Sanitary & Bathware Installation', content: 'Expert fitting of modern bathroom fixtures, from high-pressure showers and designer washbasins to complex toilet assemblies and bathtub installations.' },
+            { label: 'Hydraulic & Storage Solutions', content: 'Complete maintenance and repair of water storage systems, motor pumps, and solar water heaters, ensuring consistent water pressure and quality.' },
+            { label: 'Pequire Verified Quality', content: 'Every plumber on our platform is vetted for 100+ skill markers and background-checked, providing you with a true industry professional you can trust.' }
         ]
     },
     {
         id: '02',
         name: 'Electrical',
         points: [
-            { label: 'What we fix', content: 'Wiring, switch repairs, appliance installation, circuit breaker fixes' },
-            { label: 'Starting from', content: '₹249' },
-            { label: 'Average completion time', content: '30 mins - 2 hours' }
+            { label: 'Certified Electrical Overhauls', content: 'From resolving dangerous short circuits and faulty wiring to complete switchboard upgrades, we ensure your home power system is safe, stable, and efficient.' },
+            { label: 'Complex Appliance Integration', content: 'Seamless installation and maintenance of high-draw appliances including heavy-duty ACs, modern refrigerators, and advanced washing machine systems.' },
+            { label: 'Safety & Surge Protection', content: 'Strategic placement of circuit breakers and surge protection systems to safeguard your expensive electronics from unpredictable power fluctuations.' },
+            { label: 'Expert-Only Dispatch', content: 'Pequire matches your specific electrical issue with specialists who have a proven track record in handling that exact type of equipment or wiring.' }
         ]
     },
     {
         id: '03',
         name: 'Carpentry',
         points: [
-            { label: 'What we fix', content: 'Furniture assembly, door/window repairs, custom woodwork' },
-            { label: 'Starting from', content: '₹399' },
-            { label: 'Average completion time', content: '2-4 hours' }
+            { label: 'Bespoke Furniture Repair', content: 'Restoring the beauty and function of your valued furniture through expert joinery, polishing, and structural reinforcement by skilled woodworkers.' },
+            { label: 'Modular & Kitchen Fittings', content: 'Precision assembly of modular kitchen cabinets, custom wardrobes, and designer beds, ensuring perfect alignment and durable hardware installation.' },
+            { label: 'Security & Door Hardware', content: 'Advanced installation of secure door locks, window latches, and custom framing solutions to enhance the safety and aesthetics of your living space.' },
+            { label: 'Craftsmanship Audit', content: 'We only partner with carpenters who demonstrate mastery in diverse wood types and finishing techniques, ensuring every job meets our high premium standards.' }
         ]
     },
     {
         id: '04',
         name: 'Laundry',
         points: [
-            { label: 'What we cover', content: 'Stain removal, professional ironing, dry cleaning, general wash' },
-            { label: 'Starting from', content: '₹99' },
-            { label: 'Average completion time', content: '24-48 hours' }
+            { label: 'Professional Fabric Care', content: 'Advanced dry cleaning and gentle wash techniques tailored to specific fabric requirements, ensuring your garments maintain their texture, color, and longevity.' },
+            { label: 'Designer Wear Specialization', content: 'Specialized handling of delicate ethnic wear, formal suits, and designer labels using fabric-safe chemicals and expert stain-removal technology.' },
+            { label: 'Express Steam Pressing', content: 'High-quality steam ironing that removes even the most stubborn wrinkles, giving your clothes a crisp, professional finish every single time.' },
+            { label: 'Smart Logistics & Delivery', content: 'Track your garments from pickup to delivery with real-time updates. Enjoy a 24-48 hour turnaround time managed entirely through the Pequire ecosystem.' }
         ]
     }
 ];
