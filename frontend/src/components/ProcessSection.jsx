@@ -1,29 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-    LuDownloadCloud, LuClipboardList, LuCpu, LuCalculator, 
-    LuCalendarCheck, LuMapPin, LuWrench, LuShieldCheck, 
-    LuCreditCard, LuFileText, LuStar, LuLock, 
-    LuHistory, LuHeadset, LuGift, LuBuilding 
-} from 'react-icons/lu';
+    FiDownloadCloud, FiEdit3, FiZap, FiDollarSign, 
+    FiCalendar, FiMapPin, FiTool, FiCheckCircle, 
+    FiCreditCard, FiFileText, FiStar, FiLock, 
+    FiClock, FiPhoneCall, FiGift, FiLayers 
+} from 'react-icons/fi';
 import './ProcessSection.css';
 
 const steps = [
-    { id: 1, label: 'Download & Onboard', icon: <LuDownloadCloud />, text: 'Get the Pequire app from the Play Store or App Store and complete our quick, secure OTP-based registration in seconds.', layout: 'normal' },
-    { id: 2, label: 'Define Your Need', icon: <LuClipboardList />, text: 'Select a service category and describe your issue. You can even upload a photo for our AI to categorize the problem instantly.', layout: 'reverse' },
-    { id: 3, label: 'Instant AI Matching', icon: <LuCpu />, text: 'Our intelligent system analyzes your location and the required skills to match you with the perfect verified professional nearby.', layout: 'normal' },
-    { id: 4, label: 'Transparent Estimation', icon: <LuCalculator />, text: 'Receive a clear, upfront cost estimate based on the service type and severity—no hidden charges or post-service price surprises.', layout: 'reverse' },
-    { id: 5, label: 'Confirm Your Booking', icon: <LuCalendarCheck />, text: 'Review the matched professional\'s profile and ratings, select your preferred time slot, and confirm with a single tap.', layout: 'normal' },
-    { id: 6, label: 'Live Professional Tracking', icon: <LuMapPin />, text: 'Watch your technician move in real-time on our integrated map as they navigate to your doorstep with accurate ETA updates.', layout: 'reverse' },
-    { id: 7, label: 'Expert Service Execution', icon: <LuWrench />, text: 'The verified professional arrives and performs the job with precision while you receive live progress updates directly through the app.', layout: 'normal' },
-    { id: 8, label: 'Quality Verification', icon: <LuShieldCheck />, text: 'Once work is finished, you review the results. Our professionals ensure the workspace is left clean and the issue is fully resolved.', layout: 'reverse' },
-    { id: 9, label: 'Secure Digital Payment', icon: <LuCreditCard />, text: 'Pay safely through the app using UPI, Cards, or Net Banking only after you are 100% satisfied with the completed service.', layout: 'normal' },
-    { id: 10, label: 'Automated Digital Invoice', icon: <LuFileText />, text: 'Receive an itemized digital invoice and a comprehensive service report instantly on your device for your records and transparency.', layout: 'reverse' },
-    { id: 11, label: 'Rate & Provide Feedback', icon: <LuStar />, text: 'Share your experience and rate the professional. Your feedback helps maintain our high community standards and rewards top-tier pros.', layout: 'normal' },
-    { id: 12, label: 'Escrow Protection', icon: <LuLock />, text: 'Your payment is held securely in escrow and is only released to the professional once the job is confirmed as successfully completed.', layout: 'reverse' },
-    { id: 13, label: 'Access Service History', icon: <LuHistory />, text: 'View all your past bookings, digital invoices, and service reports anytime from your personalized account dashboard.', layout: 'normal' },
-    { id: 14, label: '24/7 Dedicated Support', icon: <LuHeadset />, text: 'Our specialized support team is always available to assist with any queries, follow-up maintenance, or service-related questions.', layout: 'reverse' },
-    { id: 15, label: 'Refer & Earn Rewards', icon: <LuGift />, text: 'Invite friends or businesses to join the Pequire ecosystem and earn exclusive rewards for every successful first service they book.', layout: 'normal' },
-    { id: 16, label: 'Manage Multiple Spaces', icon: <LuBuilding />, text: 'Add and manage multiple addresses like Home, Office, or Business to streamline maintenance for all your properties from one account.', layout: 'reverse' },
+    { id: 1, label: 'Download & Onboard', icon: FiDownloadCloud, text: 'Get the Pequire app from the Play Store or App Store and complete our quick, secure OTP-based registration in seconds.', layout: 'normal' },
+    { id: 2, label: 'Define Your Need', icon: FiEdit3, text: 'Select a service category and describe your issue. You can even upload a photo for our AI to categorize the problem instantly.', layout: 'reverse' },
+    { id: 3, label: 'Instant AI Matching', icon: FiZap, text: 'Our intelligent system analyzes your location and the required skills to match you with the perfect verified professional nearby.', layout: 'normal' },
+    { id: 4, label: 'Transparent Estimation', icon: FiDollarSign, text: 'Receive a clear, upfront cost estimate based on the service type and severity—no hidden charges or post-service price surprises.', layout: 'reverse' },
+    { id: 5, label: 'Confirm Your Booking', icon: FiCalendar, text: 'Review the matched professional\'s profile and ratings, select your preferred time slot, and confirm with a single tap.', layout: 'normal' },
+    { id: 6, label: 'Live Professional Tracking', icon: FiMapPin, text: 'Watch your technician move in real-time on our integrated map as they navigate to your doorstep with accurate ETA updates.', layout: 'reverse' },
+    { id: 7, label: 'Expert Service Execution', icon: FiTool, text: 'The verified professional arrives and performs the job with precision while you receive live progress updates directly through the app.', layout: 'normal' },
+    { id: 8, label: 'Quality Verification', icon: FiCheckCircle, text: 'Once work is finished, you review the results. Our professionals ensure the workspace is left clean and the issue is fully resolved.', layout: 'reverse' },
+    { id: 9, label: 'Secure Digital Payment', icon: FiCreditCard, text: 'Pay safely through the app using UPI, Cards, or Net Banking only after you are 100% satisfied with the completed service.', layout: 'normal' },
+    { id: 10, label: 'Automated Digital Invoice', icon: FiFileText, text: 'Receive an itemized digital invoice and a comprehensive service report instantly on your device for your records and transparency.', layout: 'reverse' },
+    { id: 11, label: 'Rate & Provide Feedback', icon: FiStar, text: 'Share your experience and rate the professional. Your feedback helps maintain our high community standards and rewards top-tier pros.', layout: 'normal' },
+    { id: 12, label: 'Escrow Protection', icon: FiLock, text: 'Your payment is held securely in escrow and is only released to the professional once the job is confirmed as successfully completed.', layout: 'reverse' },
+    { id: 13, label: 'Access Service History', icon: FiClock, text: 'View all your past bookings, digital invoices, and service reports anytime from your personalized account dashboard.', layout: 'normal' },
+    { id: 14, label: '24/7 Dedicated Support', icon: FiPhoneCall, text: 'Our specialized support team is always available to assist with any queries, follow-up maintenance, or service-related questions.', layout: 'reverse' },
+    { id: 15, label: 'Refer & Earn Rewards', icon: FiGift, text: 'Invite friends or businesses to join the Pequire ecosystem and earn exclusive rewards for every successful first service they book.', layout: 'normal' },
+    { id: 16, label: 'Manage Multiple Spaces', icon: FiLayers, text: 'Add and manage multiple addresses like Home, Office, or Business to streamline maintenance for all your properties from one account.', layout: 'reverse' },
 ];
 
 const ProcessSection = () => {
@@ -108,7 +108,7 @@ const ProcessSection = () => {
                                 ref={el => itemRefs.current[index] = el}
                                 className={`content-row ${step.layout === 'reverse' ? 'reverse' : ''} ${index === activeIndex ? 'active' : ''}`}
                             >
-                                <div className="content-image">{step.icon}</div>
+                                <div className="content-image"><step.icon /></div>
                                 <div className="content-text">
                                     <h3>{step.label}</h3>
                                     <p>{step.text}</p>

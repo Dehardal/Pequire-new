@@ -238,17 +238,33 @@
 
     .content-row {
         padding: 40px 0;
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .content-image {
+        flex: 0 0 160px;
+        width: 100%;
+        max-width: 280px;
+        height: 160px;
+        font-size: 60px;
     }
 
     .dot-1 {
         left: 10%;
         top: 10%;
         transform: none;
+        display: none;
     }
+
+    .dot-2, .dot-3 { display: none; }
 
     .dot-4 {
         left: 10%;
         top: 90%;
         transform: none;
+        display: none;
     }
 }

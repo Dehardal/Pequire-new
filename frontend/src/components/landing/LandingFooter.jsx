@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './LandingFooter.css';
-import Logo from '../../assets/Logo.webp';
-import wordmark from '../../assets/wordmark.webp';
+import Logo from '../../assets/Logo.svg';
+import wordmark from '../../assets/Wordmark.svg';
 import Letters from '../../assets/Letters.webp';
 
 
 const LandingFooter = () => {
     return (
-        <footer className="landing-footer">
+        <footer className="landing-footer" id="footer">
             <div className="container footer-inner">
                 <div className="footer-top">
                     <div className="footer-brand">
